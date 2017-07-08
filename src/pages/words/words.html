@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>学单词</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <div padding>
+    <ion-segment [(ngModel)]="type">
+      <ion-segment-button value="overUsedWords">
+        高频词汇替换
+      </ion-segment-button>
+      <ion-segment-button value="passiveWords">
+        消极词汇变身
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="type">
+    <ion-card *ngSwitchCase="'overUsedWords'">
+      <ion-card-header>
+        高频词汇任务列表
+      </ion-card-header>
+      <ion-list>
+        <button ion-item>
+          good
+        </button>
+        <button ion-item>
+          beautiful
+        </button>
+        <button ion-item>
+          difficult
+        </button>
+        <button ion-item>
+          In my opinion
+        </button>
+        <button ion-item>
+          very
+        </button>
+        <button ion-item>
+          want
+        </button>
+      </ion-list>
+    </ion-card>
+    <ion-card *ngSwitchCase="'passiveWords'">
+      <ion-card-header>
+        消极词汇任务列表
+      </ion-card-header>
+      <ion-list>
+        <button ion-item>
+          Shopping
+        </button>
+        <button ion-item>
+          Hospital
+        </button>
+        <button ion-item>
+          Cafe
+        </button>
+        <button ion-item>
+          Dog Park
+        </button>
+        <button ion-item>
+          Pub
+        </button>
+        <button ion-item>
+          Space
+        </button>
+      </ion-list>
+    </ion-card>
+    <button ion-button full clear>全部开始</button>
+  </div>
+
+
+
+</ion-content>

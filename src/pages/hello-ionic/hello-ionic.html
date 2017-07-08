@@ -3,23 +3,50 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Hello Ionic</ion-title>
+    <ion-title>Hello Ionicdd</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
 
-  <h3>Welcome to your first Ionic app!</h3>
+  <!--<h3>英语写作三部曲</h3>-->
 
-  <p>
-    This starter project is our way of helping you get a functional app running in record time.
-  </p>
-  <p>
-    Follow along on the tutorial section of the Ionic docs!
-  </p>
-  <p>
-    <button ion-button color="primary" menuToggle>Toggle Menu</button>
-  </p>
+  <!--<ion-list>
+    <ion-item (click)="itemTapped($event, item)">
+      <ion-icon name="md-trending-up" item-start></ion-icon>
+      学单词
+      <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="md-bulb" item-start></ion-icon>
+      练句型
+      <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="clipboard" item-start></ion-icon>
+      背篇章
+      <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </ion-item>
+  </ion-list>-->
+
+  <ion-card (click)="itemTapped($event, item)">
+    <img src="assets/img/words.jpg"/>
+    <div class="card-title">学单词</div>
+    <div class="card-subtitle">Words</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="assets/img/sentences.jpg"/>
+    <div class="card-title">练句型</div>
+    <div class="card-subtitle">Sentences</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="assets/img/composition.jpg"/>
+    <div class="card-title">背篇章</div>
+    <div class="card-subtitle">Composition</div>
+  </ion-card>
+
 
 </ion-content>
