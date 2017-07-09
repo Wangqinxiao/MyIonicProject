@@ -1,0 +1,63 @@
+page-overused-words {
+    ion-card {
+        ion-card-header,
+        ion-card-content {
+            font-size: 1.6rem !important;
+            padding: 0 10px !important;
+            .icon {
+                align-items: center;
+                justify-content: center;
+                display: flex;
+            }
+            ion-grid:first-of-type {
+                border-bottom: 1px #ededed dashed;
+            }
+        }
+        h3 {
+            font-size: 22px !important;
+        }
+    }
+    .overused-word {
+        h3 {
+            text-decoration: line-through;
+        }
+    }
+    .medal-progress {
+        position: relative;
+        height: 15px;
+        width: 100%;
+        border: 1px solid #488aff;
+        overflow: hidden;
+        .medal-progress-content {
+            background: #488aff;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .text-container {
+            background: transparent;
+            position: absolute;
+            z-index: 222;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .progress-text {
+                color: gray;
+                text-shadow: 1px 1px 5px #fff;
+            }
+        }
+    }
+    .highlight {
+        color: #488aff;
+    }
+    .title {
+        padding: 0 10px;
+    }
+    .color-gray {
+        color: #666;
+    }
+}

@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>词汇详情</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="medal-progress">
+    <div class="medal-progress-content" [ngStyle]="getProgressCSS()"></div>
+    <div class="text-container">
+      <span class="progress-text">1/5</span>
+    </div>
+  </div>
+
+
+  <div class="overused-word">
+    <h3 text-center>
+      good
+    </h3>
+    <p text-center>
+      adj. 好的；优良的；愉快的；虔诚的
+    </p>
+  </div>
+  <h6 class="title color-gray">建议替换单词：</h6>
+
+   <ion-card>
+    <ion-card-header>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-11>
+            <div>
+              <h3>excellent</h3>
+              <p>adj. 卓越的；极好的；杰出的</p>
+            </div>
+          </ion-col>
+          <ion-col class="icon">
+            <ion-icon name="md-add-circle" item-end (click)="presentToast('单词本')"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-11>
+            <div>
+        <p>This is an <span class="highlight">excellent</span> quality.</p>
+        <p>这是一种<span class="highlight">杰出的</span>品质。</p>
+      </div>
+          </ion-col>
+          <ion-col class="icon">
+             <ion-icon name="md-add-circle" item-end (click)="presentToast('笔记本')"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-11>
+            <div>
+              <h3>brilliant</h3>
+              <p>adj. 杰出的；有才气的；精彩的，绝妙的</p>
+            </div>
+          </ion-col>
+          <ion-col class="icon">
+            <ion-icon name="md-add-circle" item-end (click)="presentToast('单词本')"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-11>
+            <div>
+              <p>He made so many  achievements <span class="highlight">brilliant</span> in his life.</p>
+              <p>在他的一生中他做了很多<span class="highlight">杰出的</span>成就。</p>
+            </div>
+          </ion-col>
+          <ion-col class="icon">
+            <ion-icon name="md-add-circle" item-end (click)="presentToast('笔记本')"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button right full>
+        下一个
+      </button>
+  </ion-toolbar>
+</ion-footer>
