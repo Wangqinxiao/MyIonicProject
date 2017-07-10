@@ -6,8 +6,8 @@ import { MyApp } from './app.component';
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { ListPage } from '../pages/list/list';
-import { WordsPage } from '../pages/words/words';
-import { OverusedWordsPage } from '../pages/words/overused-words/overused-words';
+import { WordPage } from '../pages/word/word';
+import { OverusedWordPage } from '../pages/word/overused-word/overused-word';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -18,8 +18,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HelloIonicPage,
     ItemDetailsPage,
     ListPage,
-    WordsPage,
-    OverusedWordsPage
+    WordPage,
+    OverusedWordPage
   ],
   imports: [
     BrowserModule,
@@ -31,8 +31,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HelloIonicPage,
     ItemDetailsPage,
     ListPage,
-    WordsPage,
-    OverusedWordsPage
+    WordPage,
+    OverusedWordPage
   ],
   providers: [
     StatusBar,

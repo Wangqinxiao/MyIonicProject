@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { OverusedWordsPage } from '../words/overused-words/overused-words';
+import { OverusedWordPage } from '../word/overused-word/overused-word';
 @Component({
-  selector: 'page-words',
-  templateUrl: 'words.html'
+  selector: 'page-word',
+  templateUrl: 'word.html'
 })
-export class WordsPage {
-  type: string = 'overUsedWords';
+export class WordPage {
+  type: string = 'overUsedWord';
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     
   }
   itemTapped(event, item) {
-    this.navCtrl.push(OverusedWordsPage, {
+    this.navCtrl.push(OverusedWordPage, {
       item: item
     });
   }

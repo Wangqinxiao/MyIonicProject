@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { WordsPage } from '../words/words';
+import { WordPage } from '../word/word';
 
 @Component({
   selector: 'page-hello-ionic',
@@ -11,7 +11,7 @@ export class HelloIonicPage {
 
   }
   itemTapped(event, item) {
-    this.navCtrl.push(WordsPage, {
+    this.navCtrl.push(WordPage, {
       item: item
     });
   }

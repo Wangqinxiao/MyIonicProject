@@ -9,17 +9,17 @@
 
   <div padding>
     <ion-segment [(ngModel)]="type">
-      <ion-segment-button value="overUsedWords">
+      <ion-segment-button value="overUsedWord">
         高频词汇替换
       </ion-segment-button>
-      <ion-segment-button value="passiveWords">
+      <ion-segment-button value="passiveWord">
         消极词汇变身
       </ion-segment-button>
     </ion-segment>
   </div>
 
   <div [ngSwitch]="type">
-    <ion-card *ngSwitchCase="'overUsedWords'">
+    <ion-card *ngSwitchCase="'overUsedWord'">
       <ion-card-header>
         高频词汇任务列表
       </ion-card-header>
@@ -44,7 +44,7 @@
         </button>
       </ion-list>
     </ion-card>
-    <ion-card *ngSwitchCase="'passiveWords'">
+    <ion-card *ngSwitchCase="'passiveWord'">
       <ion-card-header>
         消极词汇任务列表
       </ion-card-header>

@@ -3,10 +3,10 @@ import { NavController, NavParams } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-overused-words',
-  templateUrl: 'overused-words.html'
+  selector: 'page-overused-word',
+  templateUrl: 'overused-word.html'
 })
-export class OverusedWordsPage {
+export class OverusedWordPage {
   getProgressCSS = function () {
     var num = 20;
     return { 'width': num + '%' };
