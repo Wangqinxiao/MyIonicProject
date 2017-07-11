@@ -1,0 +1,32 @@
+page-word-test {
+    ion-col {
+        a {
+            padding: 10px;
+            border: 1px solid #666;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            background: #fff;
+        }
+    }
+    .underline {
+      margin: 0 2px;
+      border-bottom: 1px solid #000;
+      min-width: 8px;
+      display: inline-block;
+      text-align: center;
+      color: transparent;
+    }
+    .right-letter {
+      color: green;
+    }
+    .wrong-letter {
+      color: red;
+    }
+    .disabled{
+      a{
+        background: #f9f9f9;
+        border: 1px solid lighten(#666, 20%);
+      }
+    }
+}

@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>造句</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div class="passive-word">
+    <h3 text-center>
+      outlook
+    </h3>
+    <div text-left>
+      <ul>
+        <li>n. 展望；观点；景色；</li>
+        <li>vt. 比……好看；用目光压倒；</li>
+        <li>vi. 朝外看；</li>
+      </ul>
+    </div>
+  </div>
+  <div *ngIf="addType === 'sentence-making'">
+    <ion-card>
+      <ion-card-header class="color-gray">
+        输入原文
+      </ion-card-header>
+      <ion-card-content>
+        <ion-input type="text" value=""></ion-input>
+      </ion-card-content>
+
+    </ion-card>
+    <ion-card>
+      <ion-card-header class="color-gray">
+        请输入译文
+      </ion-card-header>
+      <ion-card-content>
+        <ion-input type="text" value=""></ion-input>
+      </ion-card-content>
+
+    </ion-card>
+    <ion-card>
+      <ion-card-header class="color-gray">
+        请选择标签
+        <a class="add-lable">
+          <ion-icon ios="ios-add" md="md-add"></ion-icon>新增标签
+        </a>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-badge item-end>环境保护</ion-badge>
+        <ion-badge item-end>就业问题</ion-badge>
+        <ion-badge item-end>科技发展</ion-badge>
+
+      </ion-card-content>
+
+    </ion-card>
+  </div>
+
+  <ion-card *ngIf="addType === 'note'">
+    <ion-card-header class="color-gray">
+      请输入笔记
+    </ion-card-header>
+    <ion-card-content>
+      <ion-input type="text" value=""></ion-input>
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button full (click)="incapable()">
+       保存
+      </button>
+  </ion-toolbar>
+</ion-footer>

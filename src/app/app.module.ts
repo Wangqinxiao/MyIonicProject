@@ -8,6 +8,10 @@ import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { ListPage } from '../pages/list/list';
 import { WordPage } from '../pages/word/word';
 import { OverusedWordPage } from '../pages/word/overused-word/overused-word';
+import { PassiveWordPage } from '../pages/word/passive-word/passive-word';
+import { WordTestPage } from '../pages/word/word-test/word-test';
+import { SentenceMakingPage } from '../pages/word/passive-word/sentence-making/sentence-making';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,7 +23,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ItemDetailsPage,
     ListPage,
     WordPage,
-    OverusedWordPage
+    OverusedWordPage,
+    WordTestPage,
+    PassiveWordPage,
+    SentenceMakingPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +39,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ItemDetailsPage,
     ListPage,
     WordPage,
-    OverusedWordPage
+    OverusedWordPage,
+    WordTestPage,
+    PassiveWordPage,
+    SentenceMakingPage
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,124 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>词汇详情1</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="medal-progress">
+    <div class="medal-progress-content" [ngStyle]="getProgressCSS()"></div>
+    <div class="text-container">
+      <span class="progress-text">1/5</span>
+    </div>
+  </div>
+
+  <div class="passive-word">
+    <h3 text-center>
+      outlook
+    </h3>
+    <div text-left>
+      <ul>
+        <li>n. 展望；观点；景色；</li>
+        <li>vt. 比……好看；用目光压倒；</li>
+        <li>vi. 朝外看；</li>
+      </ul>
+    </div>
+  </div>
+  <div padding>
+    <ion-segment [(ngModel)]="type">
+      <ion-segment-button value="usage">
+        解析
+      </ion-segment-button>
+      <ion-segment-button value="sentence-making">
+        造句
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="type" padding>
+    <div *ngSwitchCase="'usage'">
+      <h6>outlook</h6>
+      <p>“前景，未来”，常用来替代future。/p>
+        <h6>常用搭配：</h6>
+        <ul>
+          <li>outlook on 对…的看法；对…眺望</li>
+          <li>world outlook 世界观</li>
+          <li>world outlook 世界观</li>
+          <li>outlook for …的前途；…的远景</li>
+          <li>outlook on life 人生观</li>
+          <li>market outlook 市场前景；市场展望</li>
+        </ul>
+        <hr>
+        <div style="text-align:center;">
+        <a ion-button outline small icon-left center (click)="sentenceMaking('note')">
+          <ion-icon name="ios-add-circle-outline"></ion-icon>
+          添加笔记
+        </a>
+      </div>
+        <h6>
+          <ion-icon ios="ios-list-box" md="md-list-box"></ion-icon> 推荐笔记：</h6>
+        <div class="sentence-item">
+          <p>当然，如果用future，就可以加个修饰语，比如foreseeable future等等。 </p>
+          <p class="color-gray user-name">来自：用户王大宝先生</p>
+        </div>
+        <div class="sentence-item">
+          <p>outlook, expectation, prospect, hope
+      这组词都有“期望，指望”的意思，其区别是：
+      outlook 多指根据征兆或分析对要发生的事情的愿望或预料。
+      expectation 指期待某事发生或假设某事能发生，多含揣想的意味。
+      prospect 与outlook的含义相近，但侧重对成功、利润和舒适生活等方面的期待。
+      hope 通常指建立在愿望基础上的期待。这种期待有可能发生或实现，但也可能相反。</p>
+          <p class="color-gray user-name">来自：用户lofj</p>
+        </div>
+          
+    </div>
+
+    <div *ngSwitchCase="'sentence-making'">
+      <div style="text-align:center;">
+        <a ion-button outline small icon-left center (click)="sentenceMaking('sentence-making')">
+          <ion-icon name="ios-add-circle-outline"></ion-icon>
+          添加造句
+        </a>
+      </div>
+      <h6>
+        <ion-icon ios="ios-list" md="md-list"></ion-icon> 推荐造句：</h6>
+      <hr>
+      <div class="sentence-item">
+        <p>Make an <span class="highlight">outlook</span> for its future development.</p>
+        <p>对其发展前景进行一次展望。</p>
+        <p class="color-gray user-name">来自：用户王大宝先生</p>
+        <p class="labels">
+          <span class="color-gray">标签：</span>
+          <ion-badge item-end>就业</ion-badge>
+          <ion-badge item-end>发展</ion-badge>
+          <ion-badge item-end>城市</ion-badge>
+        </p>
+      </div>
+      <div class="sentence-item">
+        <p> They were hopelessly deadlocked in almost total differences of opinion and <span class="highlight">outlook</span>.</p>
+        <p>他们绝望地陷于意见和观点完全分歧的僵局之中。</p>
+        <p class="color-gray user-name">来自：用户SKyll</p>
+        <p class="labels">
+          <span class="color-gray">标签：</span>
+          <ion-badge item-end>万能</ion-badge>
+          <ion-badge item-end>辨析</ion-badge>
+          <ion-badge item-end>问题</ion-badge>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button left (click)="know()">
+        太熟了
+      </button>
+    <button ion-button right (click)="next()">
+        下一个
+      </button>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,17 @@
+page-sentence-making {
+    .color-gray {
+        color: #666;
+    }
+    .sentence-item {
+        margin-bottom: 15px;
+        p {
+            margin: 5px 0;
+        }
+        .user-name {
+            text-align: right;
+        }
+    }
+    .add-lable{
+        float:right;
+    }
+}

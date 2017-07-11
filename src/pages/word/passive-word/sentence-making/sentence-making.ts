@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
-import { WordTestPage } from '../word-test/word-test';
 
 @Component({
-  selector: 'page-overused-word',
-  templateUrl: 'overused-word.html'
+  selector: 'page-sentence-making',
+  templateUrl: 'sentence-making.html'
 })
-export class OverusedWordPage {
+export class SentenceMakingPage {
+  type: string = 'usage';
+  addType: string = 'sentence-making';
   getProgressCSS = function () {
     var num = 20;
     return { 'width': num + '%' };
@@ -23,15 +24,7 @@ export class OverusedWordPage {
     });
     toast.present();
   };
-  know(){
-    let toast = this.toastCtrl.create({
-      message: '已把该单词从学习列表中移除',
-      duration: 2000,
-      position: 'top',
-    });
-    toast.present();
-  }
-  next() {
-    this.navCtrl.push(WordTestPage);
+  ngOnInit(){
+    this.addType = this.navParams.get('item');;
   }
 }

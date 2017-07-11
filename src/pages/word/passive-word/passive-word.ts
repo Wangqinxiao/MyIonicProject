@@ -2,12 +2,14 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 import { WordTestPage } from '../word-test/word-test';
+import { SentenceMakingPage } from '../passive-word/sentence-making/sentence-making';
 
 @Component({
-  selector: 'page-overused-word',
-  templateUrl: 'overused-word.html'
+  selector: 'page-passive-word',
+  templateUrl: 'passive-word.html'
 })
-export class OverusedWordPage {
+export class PassiveWordPage {
+  type: string = 'usage';
   getProgressCSS = function () {
     var num = 20;
     return { 'width': num + '%' };
@@ -33,5 +35,8 @@ export class OverusedWordPage {
   }
   next() {
     this.navCtrl.push(WordTestPage);
+  }
+  sentenceMaking(item){
+    this.navCtrl.push(SentenceMakingPage,{item: item});
   }
 }
