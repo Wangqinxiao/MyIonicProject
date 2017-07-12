@@ -2,11 +2,12 @@ page-word-test {
     ion-col {
         a {
             padding: 10px;
-            border: 1px solid #666;
+            border: 1px solid #ddd;
             display: flex;
             text-align: center;
             justify-content: center;
             background: #fff;
+            border-radius: 5px;
         }
     }
     .underline {
@@ -26,7 +27,11 @@ page-word-test {
     .disabled{
       a{
         background: #f9f9f9;
-        border: 1px solid lighten(#666, 20%);
+        border: 1px solid lighten(#ddd, 20%);
+        color: lighten(#488aff, 20%)
       }
+    }
+    #writing-word-question{
+      margin-bottom: 10px;
     }
 }

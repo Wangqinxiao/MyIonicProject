@@ -15,3 +15,9 @@ ion-footer {
 ion-content{
  background: #F9F9F9 !important; 
 }
+
+ion-footer{
+    button{
+        min-width: 120px;
+    }
+}

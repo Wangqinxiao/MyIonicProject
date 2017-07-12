@@ -7,6 +7,7 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class WordTestPage {
   theHtmlString;
+  translation; 
   letters;
   highLightWordArr;
   testOptions;
@@ -23,7 +24,7 @@ export class WordTestPage {
 
   ngOnInit() {
     let sentence = "This is an <span class='highlight'>excellent</span> quality.";
-    let translation = "这是一种<span class='highlight'>杰出的</span>品质。";
+    this.translation = "这是一种<span class='highlight'>杰出的</span>品质。";
     // process data to question format: I love to  _ _ _ _ water.
     let htmlObject = document.createElement('div');
     htmlObject.innerHTML = sentence;
