@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 import { WordTestPage } from '../word-test/word-test';
 import { SentenceMakingPage } from '../passive-word/sentence-making/sentence-making';
+import { WordSentenceTestPage  } from '../word-sentence-test/word-sentence-test';
 
 @Component({
   selector: 'page-passive-word',
@@ -34,7 +35,7 @@ export class PassiveWordPage {
     toast.present();
   }
   next() {
-    this.navCtrl.push(WordTestPage);
+    this.navCtrl.push(WordSentenceTestPage);
   }
   sentenceMaking(item){
     this.navCtrl.push(SentenceMakingPage,{item: item});

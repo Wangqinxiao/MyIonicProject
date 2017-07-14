@@ -1,10 +1,8 @@
-page-hello-ionic {
-
-}
+page-hello-ionic {}
 
 ion-footer {
     ion-toolbar {
-        .toolbar-content{
+        .toolbar-content {
             display: flex;
             justify-content: space-between;
             padding: 0 20px;
@@ -12,12 +10,42 @@ ion-footer {
     }
 }
 
-ion-content{
- background: #F9F9F9 !important; 
+ion-content {
+    background: map-get($colors, 'light' ) !important;
 }
 
-ion-footer{
-    button{
+ion-footer {
+    button {
         min-width: 120px;
+    }
+}
+
+.medal-progress {
+    position: relative;
+    height: 15px;
+    width: 100%;
+    border: 1px solid map-get($colors, 'primary' ) ;
+    overflow: hidden;
+    .medal-progress-content {
+        background: map-get($colors, 'primary' ) ;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .text-container {
+        background: transparent;
+        position: absolute;
+        z-index: 222;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .progress-text {
+            color: gray;
+            text-shadow: 1px 1px 5px #fff;
+        }
     }
 }

@@ -28,7 +28,7 @@ page-word-test {
       a{
         background: #f9f9f9;
         border: 1px solid lighten(#ddd, 20%);
-        color: lighten(#488aff, 20%)
+        color: lighten(map-get($colors, 'primary' ) , 20%)
       }
     }
     #writing-word-question{

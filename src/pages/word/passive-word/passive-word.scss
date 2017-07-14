@@ -26,10 +26,10 @@ page-passive-word {
         position: relative;
         height: 15px;
         width: 100%;
-        border: 1px solid #488aff;
+        border: 1px solid map-get($colors, 'primary' ) ;
         overflow: hidden;
         .medal-progress-content {
-            background: #488aff;
+            background: map-get($colors, 'primary' ) ;
             height: 100%;
             display: flex;
             align-items: center;
@@ -52,7 +52,7 @@ page-passive-word {
         }
     }
     .highlight {
-        color: #488aff;
+        color: map-get($colors, 'primary' ) ;
     }
     .title {
         padding: 0 10px;

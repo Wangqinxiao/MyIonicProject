@@ -9,21 +9,25 @@ import { PassiveWordPage } from '../word/passive-word/passive-word';
 })
 export class WordPage {
   type: string = 'overUsedWord';
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    
+  getProgressCSS = function () {
+    var num = 20;
+    return { 'width': num + '%' };
   }
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+  }
+
   itemTapped(event, item) {
     let pageType;
-    switch(this.type)
-    {
-    case 'overUsedWord':
-      pageType = OverusedWordPage;
-      break;
-    case 'passiveWord':
-      pageType = PassiveWordPage;
-      break;
-    default:
-      break;
+    switch (this.type) {
+      case 'overUsedWord':
+        pageType = OverusedWordPage;
+        break;
+      case 'passiveWord':
+        pageType = PassiveWordPage;
+        break;
+      default:
+        break;
     }
     this.navCtrl.push(pageType, {
       item: item

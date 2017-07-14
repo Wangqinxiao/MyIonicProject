@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>单词测试</ion-title>
+    <ion-title>消极词汇变身测试</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -9,16 +9,21 @@
   <div class="medal-progress">
     <div class="medal-progress-content" [ngStyle]="getProgressCSS()"></div>
     <div class="text-container">
-      <span class="progress-text">1/5(30%)</span>
+      <span class="progress-text">1/5</span>
     </div>
   </div>
-  <div class="test-word">
+
+  <div class="passive-word">
     <!-- <h3 text-center>
-      excellent
+      outlook
     </h3> -->
-    <p text-center>
-      adj. 杰出的，显著的，优秀的，卓越的，极好的
-    </p>
+    <div text-left>
+      <ul>
+        <li>n. 展望；观点；景色；</li>
+        <li>vt. 比……好看；用目光压倒；</li>
+        <li>vi. 朝外看；</li>
+      </ul>
+    </div>
   </div>
   <ion-card>
     <ion-card-content>
@@ -26,9 +31,15 @@
       <div [innerHTML]="translation"></div>
     </ion-card-content>
   </ion-card>
+  <ion-card class="answers-card">
+    <ion-card-content class="answers-content">
+      <div class="answers md-word-choose clearfix">
+        <div *ngFor="let option of testOptions; let optionIndex = index" (click)="pushAnswer (optionIndex)" class="word options">{{option}}</div>
+      </div>
+    </ion-card-content>
+  </ion-card>
   <ion-grid>
     <ion-row>
-      <ion-col class="options" col-2 *ngFor="let option of testOptions; let optionIndex = index" (click)="pushAnswer (optionIndex)"><a class="letter">{{option}}</a></ion-col>
       <ion-col col-6><a class="delete">提示</a></ion-col>
       <ion-col col-6><a class="delete" (click)="backSpace()">←</a></ion-col>
     </ion-row>
@@ -40,7 +51,7 @@
     <button ion-button left (click)="incapable()">
         我不会
       </button>
-      <button ion-button right (click)="next()">
+    <button ion-button right (click)="next()">
         下一个
       </button>
   </ion-toolbar>

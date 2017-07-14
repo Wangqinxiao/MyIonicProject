@@ -1,0 +1,78 @@
+page-word-sentence-test {
+    ion-col {
+        a {
+            padding: 10px;
+            border: 1px solid #ddd;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            background: #fff;
+            border-radius: 5px;
+        }
+    }
+    .underline {
+        margin: 0 2px;
+        border-bottom: 1px solid #000;
+        min-width: 8px;
+        display: inline-block;
+        text-align: center;
+        color: transparent;
+    }
+    .right-letter {
+        color: green;
+    }
+    .wrong-letter {
+        color: red;
+    }
+    .disabled {
+        background: #f9f9f9;
+        border: 1px solid #ddd !important;
+        color: lighten(#000, 50%);  
+    }
+    #writing-word-question {
+        margin-bottom: 10px;
+    }
+    .answers-card{
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+    .answers-content {
+        padding: 20px 20px 5px 20px;
+        position: relative;
+    }
+    .answers {
+        border-radius: 3px;
+        background: #fff;
+        .word {
+            border: 1px solid map-get($colors, 'primary' ) ;
+            border-radius: 3px;
+            background-color: #f5fefd;
+            margin-right: 15px;
+            margin-bottom: 15px;
+            padding: 2px 6px;
+            display: inline-block;
+        }
+    }
+    .answers-content:before{
+        content: "";
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 100%;
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        background-color: map-get($colors, 'primary' ) ;
+    }
+    .answers-content:after {
+        content: "";
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 100%;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        background-color: map-get($colors, 'primary' ) ;
+    }
+}

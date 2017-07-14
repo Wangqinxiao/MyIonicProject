@@ -7,7 +7,7 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class WordTestPage {
   theHtmlString;
-  translation; 
+  translation;
   letters;
   highLightWordArr;
   testOptions;
@@ -51,15 +51,21 @@ export class WordTestPage {
     let arr = this.highLightWordArr.concat(randomResult);
     // arr.sort(function () { return 0.5 - Math.random(); });
 
-    arr.sort(function(a, b){
-        if(a < b) return -1;
-        if(a > b) return 1;
-        return 0;
+    arr.sort(function (a, b) {
+      if (a < b) return -1;
+      if (a > b) return 1;
+      return 0;
     })
     this.testOptions = arr;
 
     this.underlineIndex = 0;
     this.underlinesHtmls = document.getElementById('writing-word-question').getElementsByClassName('underline');
+  }
+
+
+  getProgressCSS = function () {
+    var num = 30;
+    return { 'width': num + '%' };
   }
 
   //选择字母填空 
@@ -88,7 +94,7 @@ export class WordTestPage {
       this.underlinesHtmls[this.underlineIndex].innerHTML = this.highLightWordArr[this.underlineIndex];
       this.underlinesHtmls[this.underlineIndex].className = 'underline';
       this.options[this.clickedOptionIndexs[this.clickedOptionIndexs.length - 1]].className = 'options';
-      this.clickedOptionIndexs.splice(-1,1);
+      this.clickedOptionIndexs.splice(-1, 1);
     }
   };
 
