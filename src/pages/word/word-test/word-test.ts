@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { WordResultPage } from '../word-result/word-result';
 
 @Component({
   selector: 'page-word-test',
@@ -107,4 +108,10 @@ export class WordTestPage {
     }
     this.underlineIndex = this.highLightWordArr.length;
   };
+
+  next(item){
+    this.navCtrl.push(WordResultPage, {
+      item: item
+    });
+  }
 }

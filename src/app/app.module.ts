@@ -10,6 +10,7 @@ import { WordPage } from '../pages/word/word';
 import { OverusedWordPage } from '../pages/word/overused-word/overused-word';
 import { PassiveWordPage } from '../pages/word/passive-word/passive-word';
 import { WordTestPage } from '../pages/word/word-test/word-test';
+import { WordResultPage } from '../pages/word/word-result/word-result';
 import { WordSentenceTestPage  } from '../pages/word/word-sentence-test/word-sentence-test';
 import { SentenceMakingPage } from '../pages/word/passive-word/sentence-making/sentence-making';
 
@@ -28,7 +29,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     WordTestPage,
     PassiveWordPage,
     SentenceMakingPage,
-    WordSentenceTestPage
+    WordSentenceTestPage,
+    WordResultPage
   ],
   imports: [
     BrowserModule,
@@ -45,7 +47,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     WordTestPage,
     PassiveWordPage,
     SentenceMakingPage,
-    WordSentenceTestPage
+    WordSentenceTestPage,
+    WordResultPage
   ],
   providers: [
     StatusBar,

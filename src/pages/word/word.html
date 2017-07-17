@@ -22,52 +22,64 @@
     <ion-card *ngSwitchCase="'overUsedWord'">
       <ion-card-header>
         高频词汇任务列表
+        <span [ngSwitch]="status" class="float-right">
+          <a *ngSwitchCase="'init'" (click)="screen()">筛选任务</a>
+          <a *ngSwitchCase="'screening'" (click)="screenDone()">筛选完成</a>
+        </span>
       </ion-card-header>
       <ion-list>
-        <button ion-item>
-          good
-        </button>
-        <button ion-item>
-          beautiful
-        </button>
-        <button ion-item>
-          difficult
-        </button>
-        <button ion-item>
-          In my opinion
-        </button>
-        <button ion-item>
-          very
-        </button>
-        <button ion-item>
-          want
-        </button>
+        <ion-item *ngFor="let word of overUsedWords">
+          {{word.word}}
+        <ion-list inset>
+        <ion-item *ngFor="let subWord of word.subWords">
+          {{subWord.word}}
+          <button ion-button color="danger" *ngIf="status == 'screening'" class="float-right">
+            太熟了
+          </button>
+          <button ion-button color="dark" *ngIf="status == 'screening'" class="float-right">
+            太难了
+          </button>
+        </ion-item>
+      </ion-list>
+        </ion-item>
       </ion-list>
     </ion-card>
     <ion-card *ngSwitchCase="'passiveWord'">
       <ion-card-header>
         消极词汇任务列表
+        <span [ngSwitch]="status" class="float-right">
+          <a *ngSwitchCase="'init'" (click)="screen()">筛选任务</a>
+          <a *ngSwitchCase="'screening'" (click)="screenDone()">筛选完成</a>
+        </span>
       </ion-card-header>
       <ion-list>
-        <button ion-item>
-          outlook
-        </button>
-        <button ion-item>
-          skittish
-        </button>
-        <button ion-item>
-          utmost
-        </button>
-        <button ion-item>
-          Dog Park
-        </button>
-        <button ion-item>
-          Pub
-        </button>
-        <button ion-item>
-          Space
-        </button>
+        <ion-item *ngFor="let word of passiveWords">
+          {{word}}
+          <button ion-button color="danger" *ngIf="status == 'screening'" class="float-right">
+            太熟了
+          </button>
+          <button ion-button color="dark" *ngIf="status == 'screening'" class="float-right">
+            太难了
+          </button>
+        </ion-item>
       </ion-list>
+      <!-- <ion-list>
+        <ion-item-sliding *ngFor="let word of passiveWords">
+          <ion-item>
+            <h2>{{word}}</h2>
+          </ion-item>
+          <ion-item-options side="right">
+            <button ion-button color="danger">
+              <ion-icon name="md-close"></ion-icon>
+              太熟了
+            </button>
+            <button ion-button color="dark">
+              <ion-icon name="md-close"></ion-icon>
+              太难了
+            </button>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list> -->
     </ion-card>
     <button ion-button full clear (click)="itemTapped($event, item)">全部开始</button>
   </div>

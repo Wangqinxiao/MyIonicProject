@@ -9,6 +9,23 @@ import { PassiveWordPage } from '../word/passive-word/passive-word';
 })
 export class WordPage {
   type: string = 'overUsedWord';
+  status: string = 'init';
+  passiveWords: string[] = ['outlook', 'skitish', 'utmost', 'surmount', 'brilliant'];
+  overUsedWords: object[] = [
+    {
+      word: 'good', subWords: [
+        { word: 'excellent' },
+        { word: 'brilliant' }
+      ]
+    },
+    {
+      word: 'beautiful', subWords:
+      [
+        { word: 'fair' },
+        { word: 'seraphic'},
+      ]
+    }
+  ];
   getProgressCSS = function () {
     var num = 20;
     return { 'width': num + '%' };
@@ -32,5 +49,12 @@ export class WordPage {
     this.navCtrl.push(pageType, {
       item: item
     });
+  }
+
+  screen() {
+    this.status = 'screening';
+  }
+  screenDone() {
+    this.status = 'init';
   }
 }

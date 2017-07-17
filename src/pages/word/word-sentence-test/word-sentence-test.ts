@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { WordResultPage } from '../word-result/word-result';
 
 
 @Component({
@@ -102,6 +103,11 @@ export class WordSentenceTestPage {
       this.underlinesHtmls[i].className = 'underline right-letter';
     }
     this.underlineIndex = this.sentenceTextArr.length;
+  };
+  next(item){
+    this.navCtrl.push(WordResultPage, {
+      item: item
+    });
   };
 }
 
