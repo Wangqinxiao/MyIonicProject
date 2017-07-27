@@ -23,4 +23,12 @@ page-hello-ionic {
         width: 100%;
         color: #fff;
     }
+
+    [name=md-bulb]{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #fff;
+        font-size: 25px;
+    }
 }

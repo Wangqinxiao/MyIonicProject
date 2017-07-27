@@ -13,6 +13,7 @@ import { WordTestPage } from '../pages/word/word-test/word-test';
 import { WordResultPage } from '../pages/word/word-result/word-result';
 import { WordSentenceTestPage  } from '../pages/word/word-sentence-test/word-sentence-test';
 import { SentenceMakingPage } from '../pages/word/passive-word/sentence-making/sentence-making';
+import { WritingTaskPage } from '../pages/writing-task/writing-task';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -30,7 +31,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PassiveWordPage,
     SentenceMakingPage,
     WordSentenceTestPage,
-    WordResultPage
+    WordResultPage,
+    WritingTaskPage
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PassiveWordPage,
     SentenceMakingPage,
     WordSentenceTestPage,
-    WordResultPage
+    WordResultPage,
+    WritingTaskPage
   ],
   providers: [
     StatusBar,

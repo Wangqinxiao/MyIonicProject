@@ -1,0 +1,13 @@
+page-writing-task {
+    ion-card{
+        ion-card-content{
+            p{
+                margin-bottom: 10px !important;
+            }
+        }
+    }
+    .buttons{
+        display: flex;
+        justify-content: center;
+    }
+}
