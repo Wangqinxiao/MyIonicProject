@@ -1,0 +1,13 @@
+page-passage-preview {
+    ion-slides {
+        ion-slide {
+            ion-icon {
+                font-size: 50px;
+                float: right;
+                margin-top: -50px;
+                margin-right: 50px;
+                color: map-get($colors, 'primary')
+            }
+        }
+    }
+}

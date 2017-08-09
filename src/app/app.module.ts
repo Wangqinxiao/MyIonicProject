@@ -14,6 +14,9 @@ import { WordResultPage } from '../pages/word/word-result/word-result';
 import { WordSentenceTestPage  } from '../pages/word/word-sentence-test/word-sentence-test';
 import { SentenceMakingPage } from '../pages/word/passive-word/sentence-making/sentence-making';
 import { WritingTaskPage } from '../pages/writing-task/writing-task';
+import { SpecialLearnPage } from '../pages/special-learn/special-learn';
+import { PassagePreviewPage } from '../pages/special-learn/passage/preview/passage-preview';
+import { PassageLearnPage } from '../pages/special-learn/passage/learn/passage-learn';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -32,7 +35,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SentenceMakingPage,
     WordSentenceTestPage,
     WordResultPage,
-    WritingTaskPage
+    WritingTaskPage,
+    SpecialLearnPage,
+    PassagePreviewPage,
+    PassageLearnPage
   ],
   imports: [
     BrowserModule,
@@ -51,7 +57,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SentenceMakingPage,
     WordSentenceTestPage,
     WordResultPage,
-    WritingTaskPage
+    WritingTaskPage,
+    SpecialLearnPage,
+    PassagePreviewPage,
+    PassageLearnPage
   ],
   providers: [
     StatusBar,

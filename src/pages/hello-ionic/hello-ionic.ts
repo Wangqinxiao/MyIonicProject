@@ -4,6 +4,7 @@ import { AlertController } from 'ionic-angular';
 
 import { WordPage } from '../word/word';
 import { WritingTaskPage } from '../writing-task/writing-task';
+import { SpecialLearnPage } from '../special-learn/special-learn';
 
 @Component({
   selector: 'page-hello-ionic',
@@ -19,8 +20,8 @@ export class HelloIonicPage {
       case 'word':
         page = WordPage;
         break;
-      case 'special': 
-       
+      case 'special-learn': 
+        page = SpecialLearnPage;
         break;
       case 'writing-task':
         page = WritingTaskPage;
@@ -38,7 +39,7 @@ export class HelloIonicPage {
         title='基础语法练习';
         message = '句子转换练习<br>学习高级句式和语法的使用<br>提高语言表达丰富度';
         break;
-      case 'special': 
+      case 'special-learn': 
         title='主题专项练习',
         message = '以题目为核心的主题训练<br>篇章语境中学习常用语块<br>主题高度相关预制语块学习';
         break;

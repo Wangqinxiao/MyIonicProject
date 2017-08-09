@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>语块预习</ion-title>
+     <ion-buttons end (click)="showAlert($event)">
+      <button ion-button icon-only color="royal">
+        <ion-icon name="md-bulb" ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="medal-progress">
+    <div class="medal-progress-content" [ngStyle]="getProgressCSS()"></div>
+    <div class="text-container">
+      <span class="progress-text">{{getProgressText()}}</span>
+    </div>
+  </div>
+  <ion-slides>
+
+    <ion-slide *ngFor="let chunk of chunks">
+      <ion-icon ios="ios-volume-up" md="md-volume-up"></ion-icon>
+      <h2>{{chunk.en}}</h2>
+      <h2>{{chunk.cn}}</h2>
+    </ion-slide>
+
+  </ion-slides>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button left (click)="mastered()">
+        太熟了
+      </button>
+    <button ion-button right (click)="next()">
+        下一个
+      </button>
+  </ion-toolbar>
+</ion-footer>

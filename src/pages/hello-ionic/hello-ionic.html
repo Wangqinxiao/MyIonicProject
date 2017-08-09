@@ -30,22 +30,25 @@
     </ion-item>
   </ion-list>-->
 
-  <ion-card (click)="itemTapped($event, 'word')">
-    <img src="assets/img/word.jpg"/>
-    <div class="card-title">基础语法练习</div>
+  <ion-card (click)="itemTapped($event, 'grammar')">
+    <div class="mask"></div>
+    <img src="assets/img/blue-back.jpg"/>
+    <div class="card-title">写作语法练习</div>
     <!-- <div class="card-subtitle">Word</div> -->
     <ion-icon name="md-bulb" (click)="showAlert($event,'basic')"></ion-icon>
   </ion-card>
 
-  <ion-card>
-    <img src="assets/img/sentences.jpg"/>
+  <ion-card (click)="itemTapped($event, 'special-learn')">
+    <div class="mask"></div>
+    <img src="assets/img/red-back.jpg"/>
     <div class="card-title">主题专项练习</div>
     <!-- <div class="card-subtitle">Sentences</div> -->
-    <ion-icon name="md-bulb" (click)="showAlert($event,'special')"></ion-icon>
+    <ion-icon name="md-bulb" (click)="showAlert($event,'special-learn')"></ion-icon>
   </ion-card>
 
   <ion-card (click)="itemTapped($event, 'writing-task')">
-    <img src="assets/img/composition.jpg"/>
+    <div class="mask"></div>
+    <img src="assets/img/yellow-back.jpg"/>
     <div class="card-title">写作任务</div>
     <div class="card-subtitle"><ion-icon name="ios-nutrition"></ion-icon>三天后有一个新任务</div>
     <ion-icon name="md-bulb" (click)="showAlert($event, 'task')"></ion-icon>

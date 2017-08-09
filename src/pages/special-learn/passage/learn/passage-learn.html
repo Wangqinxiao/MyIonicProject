@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>篇章语块学习</ion-title>
+    <ion-buttons end (click)="showAlert($event)">
+      <button ion-button icon-only color="royal">
+        <ion-icon name="md-bulb" ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+   <div id="switch-trans-btn"><button ion-button outline small (click)="switchTrans()">译</button></div>
+  <div id="passageEn" [innerHTML]="passageEn">
+  </div>
+  <div [innerHTML]="passageCn" *ngIf="showCn">
+  </div>
+</ion-content>

@@ -5,6 +5,12 @@ page-hello-ionic {
         img{
             height: 180px;
         }
+        .mask{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            // background: rgba(0, 0, 0, .2)
+        }
     }
 
     .card-title {

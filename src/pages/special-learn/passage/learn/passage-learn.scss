@@ -1,0 +1,15 @@
+page-passage-learn {
+    #passageEn,
+    #passageCn {
+        text-align: justify;
+        margin-bottom: 10px;
+    }
+    .chunk {
+        text-decoration: underline;
+        font-weight: bolder; // color: map-get($colors, 'primary' )
+    }
+    #switch-trans-btn {
+        height: 30px;
+        text-align: right;
+    }
+}
