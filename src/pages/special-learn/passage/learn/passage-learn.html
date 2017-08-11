@@ -11,9 +11,30 @@
 
 
 <ion-content padding>
-   <div id="switch-trans-btn"><button ion-button outline small (click)="switchTrans()">译</button></div>
   <div id="passageEn" [innerHTML]="passageEn">
   </div>
   <div [innerHTML]="passageCn" *ngIf="showCn">
   </div>
+  <div id="note-page" [ngStyle]="{'right': deviceWidth+'px'}">
+    笔记区笔记区笔记区笔记区笔记区笔记区笔记区笔记区
+    <ion-icon ios="ios-arrow-dropleft-circle" md="md-arrow-dropleft-circle" (click)="toggleNotePage($event)"></ion-icon>
+  </div>
+  <div id="chunk-page" [ngStyle]="{'left': deviceWidth+'px'}">
+    语块区语块区语块区语块区语块区语块区语块区语块区
+    <ion-icon ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle" (click)="toggleChunkPage($event)"></ion-icon>
+  </div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button small outline (click)="switchTrans()">
+    译
+  </button>
+    <button ion-button small outline (click)="addNote()">
+      添加笔记
+  </button>
+    <button ion-button small outline (click)="addChunk()">
+    添加语块
+  </button>
+  </ion-toolbar>
+</ion-footer>
