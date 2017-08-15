@@ -4,6 +4,8 @@ import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 
+import { PassageTestPage } from '../test/passage-test';
+
 @Component({
   selector: 'page-passage-learn',
   templateUrl: 'passage-learn.html'
@@ -117,5 +119,7 @@ export class PassageLearnPage {
     this.toggleChunkPage();
   }
 
-
+  complete = function(){
+    this.navCtrl.push(PassageTestPage);
+  }
 }

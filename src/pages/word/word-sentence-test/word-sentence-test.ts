@@ -66,7 +66,6 @@ export class WordSentenceTestPage {
   }
 
   //选择字母填空 
-
   pushAnswer(optionIndex) {
     if ((this.underlineIndex < this.sentenceTextArr.length) && !(this.clickedOptionIndexs.indexOf(optionIndex) > -1)) {
       this.underlinesHtmls[this.underlineIndex].innerHTML = this.testOptions[optionIndex];

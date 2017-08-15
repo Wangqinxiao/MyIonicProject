@@ -35,7 +35,7 @@
     "@ionic/app-scripts": "2.0.0",
     "@ionic/cli-plugin-ionic-angular": "1.4.0",
     "@types/jquery": "^3.2.11",
-    "ionic": "3.6.0",
+    "ionic": "3.7.0",
     "typescript": "2.3.4"
   },
   "description": "An Ionic project"

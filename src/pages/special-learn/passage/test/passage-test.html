@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>语块学习测试</ion-title>
+    <ion-buttons end (click)="showAlert($event)">
+      <button ion-button icon-only color="royal">
+        <ion-icon name="md-bulb" ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div id="passageEn" [innerHTML]="passageEnHtml">
+  </div>
+  <div id="passageCn" [innerHTML]="passageCnHtml">
+  </div>
+</ion-content>
+
+<ion-footer style="border-top:1px solid #999">
+  <ion-card class="answers-card">
+    <ion-card-content class="answers-content">
+      <div class="answers md-word-choose clearfix">
+        <div *ngFor="let option of testOptions[chunkIndex]; let optionIndex = index" (click)="pushAnswer(optionIndex)" class="word options">{{option}}</div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4><a class="delete" (click)="incapable()">我不会</a></ion-col>
+      <ion-col col-4><a class="delete" (click)="backSpace()">←</a></ion-col>
+      <ion-col col-4><a class="delete" (click)="nextChunk()">下一个</a></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

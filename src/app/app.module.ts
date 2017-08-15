@@ -17,7 +17,8 @@ import { WritingTaskPage } from '../pages/writing-task/writing-task';
 import { SpecialLearnPage } from '../pages/special-learn/special-learn';
 import { PassagePreviewPage } from '../pages/special-learn/passage/preview/passage-preview';
 import { PassageLearnPage } from '../pages/special-learn/passage/learn/passage-learn';
-
+import { PassageTestPage } from '../pages/special-learn/passage/test/passage-test';
+import { PassageResultPage } from '../pages/special-learn/passage/result/passage-result';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -38,7 +39,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     WritingTaskPage,
     SpecialLearnPage,
     PassagePreviewPage,
-    PassageLearnPage
+    PassageLearnPage,
+    PassageTestPage,
+    PassageResultPage
   ],
   imports: [
     BrowserModule,
@@ -60,7 +63,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     WritingTaskPage,
     SpecialLearnPage,
     PassagePreviewPage,
-    PassageLearnPage
+    PassageLearnPage,
+    PassageTestPage,
+    PassageResultPage
   ],
   providers: [
     StatusBar,

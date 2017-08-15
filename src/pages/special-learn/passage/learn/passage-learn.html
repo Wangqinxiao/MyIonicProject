@@ -17,12 +17,13 @@
   </div>
   <div id="note-page" [ngStyle]="{'right': deviceWidth+'px'}">
     笔记区笔记区笔记区笔记区笔记区笔记区笔记区笔记区
-    <ion-icon ios="ios-arrow-dropleft-circle" md="md-arrow-dropleft-circle" (click)="toggleNotePage($event)"></ion-icon>
+    <ion-icon ios="ios-arrow-dropright-circle" md="md-arrow-dropleft-circle" (click)="toggleNotePage($event)"></ion-icon>
   </div>
   <div id="chunk-page" [ngStyle]="{'left': deviceWidth+'px'}">
     语块区语块区语块区语块区语块区语块区语块区语块区
-    <ion-icon ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle" (click)="toggleChunkPage($event)"></ion-icon>
+    <ion-icon ios="ios-arrow-dropleft-circle" md="md-arrow-dropright-circle" (click)="toggleChunkPage($event)"></ion-icon>
   </div>
+  <button ion-button full class="submit-btn" (click)="complete()">学完了</button>
 </ion-content>
 
 <ion-footer>

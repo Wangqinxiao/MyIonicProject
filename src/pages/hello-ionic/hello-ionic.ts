@@ -17,7 +17,7 @@ export class HelloIonicPage {
   itemTapped(event, item) {
     let page;
     switch (item) {
-      case 'word':
+      case 'grammar':
         page = WordPage;
         break;
       case 'special-learn': 

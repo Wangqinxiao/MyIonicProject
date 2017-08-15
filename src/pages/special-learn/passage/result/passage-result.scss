@@ -1,0 +1,104 @@
+page-passage-result{
+  background: #f4f4f4;
+  color: rgba(0,0,0,0.6);
+  .divider{
+    height: 13px;
+    background: #dddddd;
+  }
+  .task-done-title{
+    .bonus-reward{
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      color: #FF6F70;
+    }
+  }
+  .task-done-report{
+    padding: 10px 20px;
+    .report-title{
+      min-height: 25px;
+      border-bottom: 1px solid #D4D5D6;
+    }
+    .report-content{
+      padding: 10px 0 0 10px;
+      .content-item{
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+        .icon,.name,.value{
+          display: inline-block;
+        }
+        .icon{
+          width: 15%;
+          img{
+            width: 30px;
+          }
+          i{
+            font-size: 30px;
+            color: rgb(132, 152, 173);
+          }
+        }
+        .name{
+          width: 30%;
+        }
+        .value {
+          color: #FF6F70;
+        }
+        span:nth-of-type(3){
+          min-width: 20%;
+        }
+      }
+    }
+    // overwrite answer-card-content css
+    .answer-card-content{
+      border-top: 1px dashed #d8e3d2;
+      margin-top: 10px;
+      padding:10px;
+      .button-answer{
+        // width: 30px;
+        // height: 30px;
+      }
+    }
+  }
+  .task-done-comment{
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    .comment-title{
+      min-height: 25px;
+      border-bottom: 1px solid #D4D5D6;
+    }
+    .comment-content{
+      // font-family: HanziPen SC;
+      margin-bottom: 60px;
+      ul{
+        padding: 10px 0 10px 10px;
+        li {
+          padding: 5px 0 5px 10px;
+          text-indent: -1.5em;
+          text-align: justify;
+          .num{
+            font-size: 125%;
+            color: #FF6F70;
+          }
+        }
+
+        li::before {
+          content: "●\00A0\00A0\00A0";
+          color: #97DFC4;
+          text-shadow: 1px 1px 2px #666;
+        }
+      }
+      .comment-error{
+        img{
+          padding-right: 10px;
+        }
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+}
