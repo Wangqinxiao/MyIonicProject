@@ -13,15 +13,54 @@
 <ion-content padding>
   <div id="passageEn" [innerHTML]="passageEn">
   </div>
-  <div [innerHTML]="passageCn" *ngIf="showCn">
+  <div id="passageCn" [innerHTML]="passageCn" [hidden]="!showCn">
   </div>
-  <div id="note-page" [ngStyle]="{'right': deviceWidth+'px'}">
-    笔记区笔记区笔记区笔记区笔记区笔记区笔记区笔记区
-    <ion-icon ios="ios-arrow-dropright-circle" md="md-arrow-dropleft-circle" (click)="toggleNotePage($event)"></ion-icon>
+  <div id="note-page" [ngStyle]="{'right': deviceWidth+'px','width': deviceWidth-50+'px'}" padding>
+    <div class="side-page-content" padding>
+      <h4>笔记区</h4>
+      <div style="text-align:center;">
+        <a ion-button outline small icon-left center (click)="sentenceMaking('note')">
+          <ion-icon name="ios-add-circle-outline"></ion-icon>
+          添加笔记
+        </a>
+      </div>
+      <h6>
+        <ion-icon ios="ios-list-box" md="md-list-box"></ion-icon> 推荐笔记：</h6>
+      <div class="sentence-item">
+        <p>当然，如果用future，就可以加个修饰语，比如foreseeable future等等。 </p>
+        <p class="color-gray user-name"><span class="from">来自：用户@stupid</span><span>220 <ion-icon ios="ios-thumbs-up" md="md-thumbs-up"></ion-icon></span></p>
+      </div>
+      <div class="sentence-item">
+        <p>outlook, expectation, prospect, hope 这组词都有“期望，指望”的意思，其区别是： outlook 多指根据征兆或分析对要发生的事情的愿望或预料。 expectation 指期待某事发生或假设某事能发生，多含揣想的意味。
+          prospect 与outlook的含义相近，但侧重对成功、利润和舒适生活等方面的期待。 hope 通常指建立在愿望基础上的期待。这种期待有可能发生或实现，但也可能相反。</p>
+        <p class="color-gray user-name"><span class="from">来自：用户@lofj</span><span>120 <ion-icon ios="ios-thumbs-up" md="md-thumbs-up"></ion-icon></span></p>
+      </div>
+    </div>
+    <img src="assets/img/note.png" (click)="toggleNotePage($event)">
   </div>
-  <div id="chunk-page" [ngStyle]="{'left': deviceWidth+'px'}">
-    语块区语块区语块区语块区语块区语块区语块区语块区
-    <ion-icon ios="ios-arrow-dropleft-circle" md="md-arrow-dropright-circle" (click)="toggleChunkPage($event)"></ion-icon>
+  <div id="chunk-page" [ngStyle]="{'left': deviceWidth+'px','width': deviceWidth-50+'px'}">
+    <div class="side-page-content" padding>
+      <h4>语块区</h4>
+      <ion-icon ios="ios-settings" md="md-settings" (click)="toggleEditChunk()"></ion-icon>
+      <h6>我的语块：</h6>
+      <ul class="chunk-list">
+        <li *ngFor="let chunk of myChunks">
+          <span>{{chunk.cn}}<br>{{chunk.en}}</span> <ion-icon ios="ios-trash" md="md-trash" *ngIf="editChunk"></ion-icon>
+        </li>
+      </ul>
+      <h6>推荐语块：</h6>
+      <ul  class="chunk-list">
+        <li *ngFor="let chunk of chunks">
+          <span>{{chunk.cn}}<br>{{chunk.en}}</span> <ion-icon ios="ios-trash" md="md-trash" *ngIf="editChunk"></ion-icon>
+        </li>
+      </ul>
+      <!-- <ion-list>
+        <p ion-item *ngFor="let chunk of chunks">
+          {{chunk.cn}}<br>{{chunk.en}}
+        </p>
+      </ion-list> -->
+    </div>
+    <img src="assets/img/chunk.png" (click)="toggleChunkPage($event)">
   </div>
   <button ion-button full class="submit-btn" (click)="complete()">学完了</button>
 </ion-content>
