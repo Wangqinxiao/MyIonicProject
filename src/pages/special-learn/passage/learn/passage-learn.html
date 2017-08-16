@@ -15,9 +15,10 @@
   </div>
   <div id="passageCn" [innerHTML]="passageCn" [hidden]="!showCn">
   </div>
-  <div id="note-page" [ngStyle]="{'right': deviceWidth+'px','width': deviceWidth-50+'px'}" padding>
+  <div id="note-page" [ngStyle]="{'right': deviceWidth+'px','width': deviceWidth-50+'px'}">
     <div class="side-page-content" padding>
       <h4>笔记区</h4>
+      <textarea cols="40" rows="5"></textarea>
       <div style="text-align:center;">
         <a ion-button outline small icon-left center (click)="sentenceMaking('note')">
           <ion-icon name="ios-add-circle-outline"></ion-icon>
@@ -45,13 +46,15 @@
       <h6>我的语块：</h6>
       <ul class="chunk-list">
         <li *ngFor="let chunk of myChunks">
-          <span>{{chunk.cn}}<br>{{chunk.en}}</span> <ion-icon ios="ios-trash" md="md-trash" *ngIf="editChunk"></ion-icon>
+          <span>{{chunk.cn}}<br>{{chunk.en}}</span>
+          <ion-icon ios="ios-trash" md="md-trash" *ngIf="editChunk"></ion-icon>
         </li>
       </ul>
       <h6>推荐语块：</h6>
-      <ul  class="chunk-list">
+      <ul class="chunk-list">
         <li *ngFor="let chunk of chunks">
-          <span>{{chunk.cn}}<br>{{chunk.en}}</span> <ion-icon ios="ios-trash" md="md-trash" *ngIf="editChunk"></ion-icon>
+          <span>{{chunk.cn}}<br>{{chunk.en}}</span>
+          <ion-icon ios="ios-trash" md="md-trash" *ngIf="editChunk"></ion-icon>
         </li>
       </ul>
       <!-- <ion-list>
@@ -62,19 +65,17 @@
     </div>
     <img src="assets/img/chunk.png" (click)="toggleChunkPage($event)">
   </div>
-  <button ion-button full class="submit-btn" (click)="complete()">学完了</button>
-</ion-content>
-
-<ion-footer>
-  <ion-toolbar>
-    <button ion-button small outline (click)="switchTrans()">
+  <ion-footer>
+    <ion-toolbar>
+      <button ion-button (click)="complete()">学完了</button>
+      <button ion-button outline (click)="switchTrans()">
     译
   </button>
-    <button ion-button small outline (click)="addNote()">
+      <button ion-button outline (click)="addNote()">
       添加笔记
   </button>
-    <button ion-button small outline (click)="addChunk()">
+      <button ion-button outline (click)="addChunk()">
     添加语块
   </button>
-  </ion-toolbar>
-</ion-footer>
+    </ion-toolbar>
+  </ion-footer>

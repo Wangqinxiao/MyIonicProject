@@ -16,6 +16,9 @@ page-passage-learn {
     ion-footer ion-toolbar .toolbar-content {
         padding: 0;
     }
+    ion-footer button {
+        min-width: 80px;
+    }
     #note-page {
         background: #fff;
         position: absolute;
@@ -27,6 +30,9 @@ page-passage-learn {
         //     right: -15px;
         //     font-size: 30px;
         // }
+        textarea{
+            border: 1px solid #999;
+        }
         h4 {
             text-align: center;
         }

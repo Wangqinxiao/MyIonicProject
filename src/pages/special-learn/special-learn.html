@@ -66,40 +66,40 @@
     </ion-card>
   </div> -->
 
-<ion-list>
-  <ion-item (click)="doExcercise($event,'passage')">
-    <ion-thumbnail item-start>
-      <!-- <img src="assets/img/card-amsterdam.png"> -->
-      <ion-icon name="ios-clipboard-outline" style="font-size:56px;"></ion-icon>
-    </ion-thumbnail>
-    <h2>篇章语块精学</h2>
-    <div class="progress-bar">
-      <div style="width:40%" class="bar-content"></div>
-    </div>
-    <button ion-button clear item-end>继续学习</button>
-  </ion-item>
-  <ion-item (click)="doExcercise($event,'expression')">
-    <ion-thumbnail item-start>
-      <!-- <img src="assets/img/card-saopaolo.png"> -->
-      <ion-icon name="ios-apps-outline" style="font-size:56px;"></ion-icon>
-    </ion-thumbnail>
-    <h2>主题常用表达</h2>
-    <div class="progress-bar">
-      <div style="width:100%" class="bar-content"></div>
-    </div>
-    <button ion-button clear item-end>查看报告</button>
-  </ion-item>
-  <ion-item (click)="doExcercise($event,'experience')">
-    <ion-thumbnail item-start>
-      <!-- <img src="assets/img/card-sf.png"> -->
-      <ion-icon name="ios-folder-outline" style="font-size:56px;"></ion-icon>
-    </ion-thumbnail>
-    <h2>考经</h2>
-    <div class="progress-bar">
-      <div style="width:0%" class="bar-content"></div>
-    </div>
-    <button ion-button clear item-end>去学习</button>
-  </ion-item>
-</ion-list>
+  <ion-list>
+    <ion-item (click)="doExcercise($event,'expression')">
+      <ion-thumbnail item-start>
+        <!-- <img src="assets/img/card-saopaolo.png"> -->
+        <ion-icon name="ios-apps-outline" style="font-size:56px;"></ion-icon>
+      </ion-thumbnail>
+      <h2>表达积累</h2>
+      <div class="progress-bar">
+        <div style="width:100%" class="bar-content"></div>
+      </div>
+      <button ion-button clear item-end>查看报告</button>
+    </ion-item>
+    <ion-item (click)="doExcercise($event,'passage')">
+      <ion-thumbnail item-start>
+        <!-- <img src="assets/img/card-amsterdam.png"> -->
+        <ion-icon name="ios-clipboard-outline" style="font-size:56px;"></ion-icon>
+      </ion-thumbnail>
+      <h2>篇章精学</h2>
+      <div class="progress-bar">
+        <div style="width:40%" class="bar-content"></div>
+      </div>
+      <button ion-button clear item-end>继续学习</button>
+    </ion-item>
+    <ion-item (click)="doExcercise($event,'experience')">
+      <ion-thumbnail item-start>
+        <!-- <img src="assets/img/card-sf.png"> -->
+        <ion-icon name="ios-folder-outline" style="font-size:56px;"></ion-icon>
+      </ion-thumbnail>
+      <h2>考经</h2>
+      <div class="progress-bar">
+        <div style="width:0%" class="bar-content"></div>
+      </div>
+      <button ion-button clear item-end>去学习</button>
+    </ion-item>
+  </ion-list>
 
 </ion-content>
