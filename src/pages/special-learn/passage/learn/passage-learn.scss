@@ -22,8 +22,8 @@ page-passage-learn {
     #note-page {
         background: #fff;
         position: absolute;
-        height: 100%;
-        top: 0px;
+        height: calc(100%-50px);
+        top: 45px;
         z-index: 1; // ion-icon {
         //     position: absolute;
         //     top: 50%;
@@ -78,8 +78,8 @@ page-passage-learn {
     #chunk-page {
         background: #fff;
         position: absolute;
-        height: 100%;
-        top: 0px;
+        height: calc(100%-50px);
+        top: 45px;
         z-index: 1; // ion-icon {
         //     position: absolute;
         //     top: 50%;

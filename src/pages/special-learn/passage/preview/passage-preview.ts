@@ -16,7 +16,8 @@ export class PassagePreviewPage {
 
   @ViewChild(Slides) slides: Slides;
 
-  chunks = [{ en: 'Environmental protection', cn: '环境保护' }, { en: 'for the benefit of both the environment and humans', cn: '为了环境和人类的共同利益' }, { en: 'biophysical environment', cn: '生物物理环境'},{ en: 'Environmental protection', cn: '环境保护' }, { en: 'for the benefit of both the environment and humans', cn: '为了环境和人类的共同利益' }, { en: 'biophysical environment', cn: '生物物理环境'}];
+   chunks = [{ en: 'both meaningful and instructive', cn: '意味深长而发人深省' },{ en: 'The pictures serve to remind us that', cn: '这幅漫画是为了提醒我们' },{ en: 'guarantee the comfort and safety of generations to come', cn: '确保我们后代的幸福和平安' }, { en: 'Sustainable development', cn: '可持续发展' }, { en: 'it is justifiable to', cn: '无可厚非'},{en:'in the interest of making a profit',cn:'为了获得利润'}];
+
 
   progressText = 1 + '/' + this.chunks.length;
 
