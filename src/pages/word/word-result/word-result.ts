@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { SpecialLearnPage } from '../../../pages/special-learn/special-learn';
 
 
 @Component({
@@ -15,6 +16,10 @@ export class WordResultPage {
 
   ngOnInit() {
    
+  }
+
+  backHome = function(){
+    this.navCtrl.push(SpecialLearnPage);
   }
 
 

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';;
 import { PassagePreviewPage } from '../special-learn/passage/preview/passage-preview';
+import { ExperiencePage } from '../special-learn/experience/experience';
+import { ExpressionTaskPage } from '../special-learn/expression/task/task';
 
 @Component({
   selector: 'page-special-learn',
@@ -21,7 +23,10 @@ export class SpecialLearnPage {
         pageType = PassagePreviewPage;
         break;
       case 'expression':
-        pageType = '';
+        pageType = ExpressionTaskPage;
+        break;
+      case 'experience':
+        pageType = ExperiencePage;
         break;
       default:
         break;
@@ -30,6 +35,6 @@ export class SpecialLearnPage {
       item: item
     });
   }
-  
+
 
 }

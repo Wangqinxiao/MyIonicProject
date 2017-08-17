@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>任务列表</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card>
+    <ion-card-header>
+      <span [ngSwitch]="status" class="float-right">
+          <a *ngSwitchCase="'init'" (click)="screen()">筛选任务</a>
+          <a *ngSwitchCase="'screening'" (click)="screenDone()">筛选完成</a>
+        </span>
+    </ion-card-header>
+    <ion-list>
+      <ion-item *ngFor="let word of passiveWords">
+        {{word}}
+        <div>
+          <button ion-button color="danger" *ngIf="status == 'screening'" class="float-right">
+            太熟了
+          </button>
+          <button ion-button color="dark" *ngIf="status == 'screening'" class="float-right">
+            太难了
+          </button> 
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <button ion-button full clear (click)="itemTapped($event, item)">全部开始</button>
+
+
+
+
+</ion-content>

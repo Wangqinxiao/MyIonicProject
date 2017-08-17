@@ -1,0 +1,34 @@
+page-expression-learn {
+    ion-card {
+        ion-card-header,
+        ion-card-content {
+            font-size: 1.6rem !important;
+            padding: 0 10px !important;
+            .icon {
+                align-items: center;
+                justify-content: center;
+                display: flex;
+            }
+            ion-grid:first-of-type {
+                border-bottom: 1px #ededed dashed;
+            }
+        }
+        h3 {
+            font-size: 22px !important;
+        }
+    }
+    .overused-word {
+        h3 {
+            text-decoration: line-through;
+        }
+    }
+    .highlight {
+        color: map-get($colors, 'primary' ) ;
+    }
+    .title {
+        padding: 0 10px;
+    }
+    .color-gray {
+        color: #666;
+    }
+}

@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>任务学习</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="medal-progress">
+    <div class="medal-progress-content" [ngStyle]="getProgressCSS()"></div>
+    <div class="text-container">
+      <span class="progress-text">1/10</span>
+    </div>
+  </div>
+
+  <div>
+    <h3 text-center>
+      excellent
+    </h3>
+  </div>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-11>
+            <div>
+              <h3>excellent</h3>
+              <p>adj. 卓越的；极好的；杰出的</p>
+            </div>
+          </ion-col>
+          <ion-col class="icon">
+            <ion-icon name="md-add-circle" item-end (click)="presentToast('单词本')"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-11>
+            <div>
+              <p>This is an <span class="highlight">excellent</span> quality.</p>
+              <p>这是一种<span class="highlight">杰出的</span>品质。</p>
+            </div>
+          </ion-col>
+          <ion-col class="icon">
+            <ion-icon name="md-add-circle" item-end (click)="presentToast('笔记本')"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button left (click)="know()">
+        太熟了
+      </button>
+    <button ion-button right (click)="next()">
+        下一个
+      </button>
+  </ion-toolbar>
+</ion-footer>

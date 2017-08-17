@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { WordResultPage } from '../word-result/word-result';
+import { ExpressionReviewPage } from '../../../pages/special-learn/expression/review/review';
 
 
 @Component({
@@ -104,7 +104,7 @@ export class WordSentenceTestPage {
     this.underlineIndex = this.sentenceTextArr.length;
   };
   next(item){
-    this.navCtrl.push(WordResultPage, {
+    this.navCtrl.push(ExpressionReviewPage, {
       item: item
     });
   };

@@ -19,20 +19,20 @@
     <div class="report-content">
       <div class="content-item">
         <span class="icon"><img src="assets/img/newWord.png"/></span>
-        <span class="name">新学词汇</span>
-        <span class="value"><span>1</span>个</span>
-        <span class="value">用时<span ng-if="vm.newWordTime">3994</span><span ng-if="!vm.newWordTime">秒</span></span>
+        <span class="name">新学表达</span>
+        <span class="value"><span>6</span>个</span>
+        <span class="value">用时<span ng-if="vm.newWordTime">4分20秒</span></span>
       </div>
       <div class="content-item">
         <span class="icon"><img src="assets/img/reviewedWord.png"/></span>
-        <span class="name">复习词汇</span>
-        <span class="value"><span>343</span>个</span>
-        <span class="value">用时<span ng-if="vm.reviewWordTime">939</span><span ng-if="!vm.reviewWordTime">秒</span></span>
+        <span class="name">复习表达</span>
+        <span class="value"><span>1</span>个</span>
+        <span class="value">用时<span ng-if="vm.reviewWordTime">1分10秒</span><span ng-if="!vm.reviewWordTime"></span></span>
       </div>
       <div class="content-item">
         <span class="icon"><i class="icon ion-android-alarm-clock"></i></span>
         <span class="name">总耗时</span>
-        <span class="value">3994</span>
+        <span class="value">5分30秒</span>
       </div>
     </div>
   </div>
@@ -42,9 +42,10 @@
     </div>
     <div class="comment-content">
       <ul>
-        <li>到目前为止，您总共学习了<span class="num">3434</span>个考研词汇。</li>
-        <li>好</li>
-        <li>好</li>
+        <li>本次学习中，您总共学习了<span class="num">6</span>个写作表达。包括<span class="num">2</span>个写作词汇，<span class="num">2</span>个词组和搭配，<span class="num">2</span>个句型。</li>
+        <li>到目前为止，您总共学习了<span class="num">60</span>个写作表达。</li>
+        <li>表达积累学习中，记忆准确，任务全部完成。</li>
+        <li>你的表现真的太棒了，希望你可以继续搭乘方舟到达成功的彼岸。</li>
         <!-- <li>{{vm.evaluationSent}}</li>
         <li>{{vm.encouragingSent}}</li> -->
       </ul>
@@ -56,7 +57,7 @@
 
 <ion-footer>
   <ion-toolbar>
-    <button ion-button left (click)="incapable()">
+    <button ion-button left (click)="backHome()">
         返回主页
       </button>
     <button ion-button right (click)="next()">

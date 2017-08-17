@@ -19,6 +19,10 @@ import { PassagePreviewPage } from '../pages/special-learn/passage/preview/passa
 import { PassageLearnPage } from '../pages/special-learn/passage/learn/passage-learn';
 import { PassageTestPage } from '../pages/special-learn/passage/test/passage-test';
 import { PassageResultPage } from '../pages/special-learn/passage/result/passage-result';
+import { ExperiencePage } from '../pages/special-learn/experience/experience';
+import { ExpressionTaskPage } from '../pages/special-learn/expression/task/task';
+import { ExpressionLearnPage } from '../pages/special-learn/expression/learn/learn';
+import { ExpressionReviewPage } from '../pages/special-learn/expression/review/review';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -41,7 +45,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PassagePreviewPage,
     PassageLearnPage,
     PassageTestPage,
-    PassageResultPage
+    PassageResultPage,
+    ExperiencePage,
+    ExpressionTaskPage,
+    ExpressionLearnPage,
+    ExpressionReviewPage  
   ],
   imports: [
     BrowserModule,
@@ -65,7 +73,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PassagePreviewPage,
     PassageLearnPage,
     PassageTestPage,
-    PassageResultPage
+    PassageResultPage,
+    ExperiencePage,
+    ExpressionTaskPage,
+    ExpressionLearnPage,
+    ExpressionReviewPage  
   ],
   providers: [
     StatusBar,
