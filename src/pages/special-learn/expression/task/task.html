@@ -1,22 +1,32 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>任务列表</ion-title>
+    <ion-title>表达积累</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
+  
+  <div class="medal-progress">
+    <div class="medal-progress-content" style = "width:0"></div>
+    <div class="text-container">
+      <span class="progress-text">0/10</span>
+    </div>
+  </div>
 
   <ion-card>
     <ion-card-header>
-      <span [ngSwitch]="status" class="float-right">
+      <!-- <span [ngSwitch]="status" class="float-right">
           <a *ngSwitchCase="'init'" (click)="screen()">筛选任务</a>
           <a *ngSwitchCase="'screening'" (click)="screenDone()">筛选完成</a>
-        </span>
+        </span> -->
+        任务列表
     </ion-card-header>
     <ion-list>
-      <ion-item *ngFor="let word of passiveWords">
-        {{word}}
+      <ion-item *ngFor="let task of tasks;let i = index">
+        <ion-icon name="checkmark" style="font-size:30px;color:green;margin-right:10px;font-weight:bolder" [hidden]="i>2"></ion-icon>
+        <ion-icon name="checkmark" style="font-size:30px;color:transparent;margin-right:10px;font-weight:bolder" [hidden]="i<=2"></ion-icon>
+        <div style="display:inline-block;width: 90%;overflow: auto;text-overflow: ellipsis;">{{task.en}}<br>{{task.cn}}</div>
         <div>
           <button ion-button color="danger" *ngIf="status == 'screening'" class="float-right">
             太熟了

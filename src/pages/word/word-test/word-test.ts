@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { WordResultPage } from '../word-result/word-result';
 import { WordSentenceTestPage  } from '../word-sentence-test/word-sentence-test';
+import { ExpressionTestPage } from '../../../pages/special-learn/expression/test/test';
 
 @Component({
   selector: 'page-word-test',
@@ -111,7 +112,7 @@ export class WordTestPage {
   };
 
   next(item){
-    this.navCtrl.push(WordSentenceTestPage, {
+    this.navCtrl.push(ExpressionTestPage, {
       item: item
     });
   }

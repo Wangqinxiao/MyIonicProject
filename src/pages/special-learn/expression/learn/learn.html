@@ -7,15 +7,15 @@
 
 <ion-content>
   <div class="medal-progress">
-    <div class="medal-progress-content" [ngStyle]="getProgressCSS()"></div>
+    <div class="medal-progress-content" style="width:10%"></div>
     <div class="text-container">
       <span class="progress-text">1/10</span>
     </div>
   </div>
 
-  <div>
+  <div style="margin-top:100px;margin-bottom:50px">
     <h3 text-center>
-      excellent
+      工业排放物
     </h3>
   </div>
 
@@ -25,12 +25,13 @@
         <ion-row>
           <ion-col col-11>
             <div>
-              <h3>excellent</h3>
-              <p>adj. 卓越的；极好的；杰出的</p>
+              <h3>Industrial emissions</h3>
+              <!-- <p>adj. 卓越的；极好的；杰出的</p> -->
             </div>
           </ion-col>
           <ion-col class="icon">
-            <ion-icon name="md-add-circle" item-end (click)="presentToast('单词本')"></ion-icon>
+            <!-- <ion-icon name="md-add-circle" item-end (click)="presentToast('单词本')"></ion-icon> -->
+            <ion-icon ios="ios-volume-up" md="md-volume-up" style="color:#488aff;font-size: 20px;"></ion-icon>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -40,12 +41,13 @@
         <ion-row>
           <ion-col col-11>
             <div>
-              <p>This is an <span class="highlight">excellent</span> quality.</p>
-              <p>这是一种<span class="highlight">杰出的</span>品质。</p>
+              <p>这不仅仅<span class="highlight">清理</span>了地球周围的环境，对企业家来说还有可能是一个有利可图的生意。清理干净.</p>
+              <p>Not only could we <span class="underline highlight">clean</span> <span class="underline highlight">up</span> the atmosphere around the earth but could possibly be a money making mission for entrepreneurs.</p>
             </div>
           </ion-col>
           <ion-col class="icon">
-            <ion-icon name="md-add-circle" item-end (click)="presentToast('笔记本')"></ion-icon>
+            <ion-icon ios="ios-volume-up" md="md-volume-up" style="color:#488aff;font-size: 20px;"></ion-icon>
+            <!-- <ion-icon name="md-add-circle" item-end (click)="presentToast('笔记本')"></ion-icon> -->
           </ion-col>
         </ion-row>
       </ion-grid>

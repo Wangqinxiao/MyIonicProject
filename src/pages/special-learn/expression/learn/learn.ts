@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 
 import { WordTestPage } from '../../../word/word-test/word-test';
+import { ExpressionTestPage } from '../test/test';
 
 @Component({
   selector: 'page-expression-learn',

@@ -10,22 +10,8 @@ import { ExpressionLearnPage } from '../../../special-learn/expression/learn/lea
 export class ExpressionTaskPage {
   type: string = 'overUsedWord';
   status: string = 'init';
-  passiveWords: string[] = ['outlook', 'skitish', 'comply with', 'reasons are listed as follows', 'In a word'];
-  overUsedWords: object[] = [
-    {
-      word: 'good', subWords: [
-        { word: 'excellent' },
-        { word: 'brilliant' }
-      ]
-    },
-    {
-      word: 'beautiful', subWords:
-      [
-        { word: 'fair' },
-        { word: 'seraphic'},
-      ]
-    }
-  ];
+  tasks: object[] = [{en:'Industrial emissions',cn:'工业排放物'},{en:'slow down the rate of resource degradation',cn:'降低资源消耗率'},{en:'comply with',cn:'遵从'},{en:'clean up',cn:'清理'},{en:'Behind them all, though, is the contradiction between economic growth and the environment.',cn:'所有这一切的背后是经济增长和环境保护之间的矛盾'},];
+
   getProgressCSS = function () {
     var num = 20;
     return { 'width': num + '%' };

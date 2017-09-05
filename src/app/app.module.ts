@@ -23,6 +23,7 @@ import { ExperiencePage } from '../pages/special-learn/experience/experience';
 import { ExpressionTaskPage } from '../pages/special-learn/expression/task/task';
 import { ExpressionLearnPage } from '../pages/special-learn/expression/learn/learn';
 import { ExpressionReviewPage } from '../pages/special-learn/expression/review/review';
+import { ExpressionTestPage } from '../pages/special-learn/expression/test/test';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -49,7 +50,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ExperiencePage,
     ExpressionTaskPage,
     ExpressionLearnPage,
-    ExpressionReviewPage  
+    ExpressionReviewPage,
+    ExpressionTestPage  
   ],
   imports: [
     BrowserModule,
@@ -77,7 +79,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ExperiencePage,
     ExpressionTaskPage,
     ExpressionLearnPage,
-    ExpressionReviewPage  
+    ExpressionReviewPage,
+    ExpressionTestPage 
   ],
   providers: [
     StatusBar,

@@ -6,66 +6,7 @@
 
 
 <ion-content padding>
-
-  <!-- <div padding>
-    <ion-segment [(ngModel)]="type">
-      <ion-segment-button value="passage-learn">
-        篇章语块精学
-      </ion-segment-button>
-      <ion-segment-button value="topic-learn">
-        主题常用表达
-      </ion-segment-button>
-      <ion-segment-button value="tips">
-        考经
-      </ion-segment-button>
-    </ion-segment>
-  </div>
-
-  <div [ngSwitch]="type">
-    <ion-card *ngSwitchCase="'passage-learn'" id="passage-learn">
-      <button class="switch-trans-btn" ion-button outline small (click)="switchTrans()">译</button>
-      <ion-card-header>
-        Environmental protection
-      </ion-card-header>
-      <div class="en" padding>
-        Environmental protection is a practice of protecting the natural environment on individual, organisation controlled or governmental
-        levels, for the benefit of both the environment and humans. Due to the pressures of overconsumption over consumption,
-        population and technology, the biophysical environment is being degraded, sometimes permanently. This has been recognized,
-        and governments have begun placing restraints on activities that cause environmental degradation. Since the 1960s,
-        activity of environmental movements has created awareness of the various environmental issues. There is no agreement
-        on the extent of the environmental impact of human activity and even scientific dishonesty occurs, so protection
-        measures are occasionally debated.
-      </div>
-      <div class="cn" padding *ngIf="showCn">
-        环境保护（简称环保）是在个人、组织或政府层面，为大自然和人类福祉而保护自然环境的行为。由于工业发展导致环境污染问题过于严重，损害生态环境，部分更达到无法挽回的地步，触发各工业化国家对环境的重视，继而利用国家法律法规去规管和处理污染问题，并作出宣传使全社会注意污染对环境的深远影响。自1960年代起，环保运动已渐渐令大众更重视身边的各种环境问题。学术机构现在提供课程，如环境研究、环境管理和环境工程等，教授环境保护历史和方法。保护环境需要人类的各种活动。废物生产、空气污染、生物多样性丧失（物种入侵和灭绝所致）都是环保的相关议题。环境保护有三个相关因素：环境立法、道德与教育。这些因素都对国家环保决策和个人环境价值与行为产生影响
-      </div>
-      <div class="button-group" text-center>
-        <button ion-button round  outline small>深入学习</button>
-      </div>
-      <ion-card-content>
-         Add card content here! 
-      </ion-card-content>
-    </ion-card>
-    <ion-card *ngSwitchCase="'topic-learn'">
-      <ion-card-header>
-        Card Header
-      </ion-card-header>
-
-      <ion-card-content>
-         Add card content here! 
-      </ion-card-content>
-    </ion-card>
-    <ion-card *ngSwitchCase="'tips'">
-      <ion-card-header>
-        Card Header
-      </ion-card-header>
-
-      <ion-card-content>
-         Add card content here! 
-      </ion-card-content>
-    </ion-card>
-  </div> -->
-
+  
   <ion-list>
     <ion-item (click)="doExcercise($event,'expression')">
       <ion-thumbnail item-start>
@@ -74,7 +15,7 @@
       </ion-thumbnail>
       <h2>表达积累</h2>
       <div class="progress-bar">
-        <div style="width:100%" class="bar-content"></div>
+        <div style="width:30%" class="bar-content"></div>
       </div>
       <button ion-button clear item-end>查看报告</button>
     </ion-item>

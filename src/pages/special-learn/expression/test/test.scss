@@ -1,24 +1,4 @@
-page-passage-test {
-    #passageEn,
-    #passageCn {
-        text-align: justify;
-        margin-bottom: 10px;
-        user-select: auto;
-    }
-    .chunk {
-        text-decoration: underline;
-        font-weight: bolder;
-    }
-    .chunk-cn{
-        text-decoration: underline;
-        font-weight: bolder;
-    }
-    .chunk-cn:first-of-type{
-        background: rgba(255, 255, 0, 0.5)
-    }
-    ion-footer {
-        box-shadow: -1px -3px 5px #999;
-    }
+page-expression-test {
     ion-col {
         a {
             padding: 10px;
@@ -38,9 +18,6 @@ page-passage-test {
         text-align: center;
         color: transparent;
     }
-    .color-blue{
-        color: map-get($colors, 'primary');
-    }
     .right-letter {
         color: green;
     }
@@ -50,14 +27,17 @@ page-passage-test {
     .disabled {
         background: #f9f9f9;
         border: 1px solid #ddd !important;
-        color: lighten(#000, 50%);
+        color: lighten(#000, 50%);  
+    }
+    .highlight{
+        color: map-get($colors, 'primary' ); 
     }
     #writing-word-question {
         margin-bottom: 10px;
     }
-    .answers-card {
+    .answers-card{
+        margin-top: 20px;
         margin-bottom: 0;
-        box-shadow: none;
     }
     .answers-content {
         padding: 20px 20px 5px 20px;
@@ -67,7 +47,7 @@ page-passage-test {
         border-radius: 3px;
         background: #fff;
         .word {
-            border: 1px solid map-get($colors, 'primary');
+            border: 1px solid map-get($colors, 'primary' ) ;
             border-radius: 3px;
             background-color: #f5fefd;
             margin-right: 15px;
@@ -76,7 +56,7 @@ page-passage-test {
             display: inline-block;
         }
     }
-    .answers-content:before {
+    .answers-content:before{
         content: "";
         display: block;
         width: 6px;
@@ -85,7 +65,7 @@ page-passage-test {
         position: absolute;
         left: 5px;
         top: 5px;
-        background-color: map-get($colors, 'primary');
+        background-color: map-get($colors, 'primary' ) ;
     }
     .answers-content:after {
         content: "";
@@ -96,6 +76,6 @@ page-passage-test {
         position: absolute;
         right: 5px;
         top: 5px;
-        background-color: map-get($colors, 'primary');
+        background-color: map-get($colors, 'primary' ) ;
     }
 }

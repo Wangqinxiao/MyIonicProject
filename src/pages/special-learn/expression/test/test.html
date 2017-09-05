@@ -1,0 +1,100 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>任务测试</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <div *ngIf="test === 'chunkTest'">
+    <div class="medal-progress">
+      <div class="medal-progress-content" [ngStyle]="getProgressCSS()"></div>
+      <div class="text-container">
+        <span class="progress-text">1/10</span>
+      </div>
+    </div>
+
+    <div class="passive-word">
+      <!-- <h3 text-center>
+      outlook
+    </h3> -->
+    </div>
+    <ion-card>
+      <ion-card-content>
+        <div id="writing-word-question">Not only could we <span class="underline right-letter">clean</span> <span class="underline wrong-letter">out</span> the atmosphere around the earth but could possibly be a money making mission for entrepreneurs.</div>
+        <div>这不仅仅<span class="highlight">清理</span>了地球周围的环境，对企业家来说还有可能是一个有利可图的生意。清理干净.</div>
+      </ion-card-content>
+    </ion-card>
+    <ion-card class="answers-card">
+      <ion-card-content class="answers-content">
+        <div class="answers md-word-choose clearfix">
+          <div class="word options disabled">clean</div>
+          <div class="word options disabled">out</div>
+          <div class="word options">up</div>
+          <div class="word options">wash</div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6><a class="delete">提示</a></ion-col>
+        <ion-col col-6><a class="delete" (click)="backSpace()">←</a></ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+   <div *ngIf="test === 'sentenceTest'">
+    <div class="medal-progress">
+      <div class="medal-progress-content" [ngStyle]="getProgressCSS()"></div>
+      <div class="text-container">
+        <span class="progress-text">1/10</span>
+      </div>
+    </div>
+
+    <div class="passive-word">
+      <!-- <h3 text-center>
+      outlook
+    </h3> -->
+    </div>
+    <ion-card>
+      <ion-card-content>
+        <div id="writing-word-question"><span class="underline right-letter">It</span><span class="underline right-letter">takes</span><span class="underline">ages</span><span class="underline">for</span><span class="underline">our</span><span class="underline">government</span><span class="underline">to</span><span class="underline">clean</span><span class="underline">up</span><span class="underline">the</span><span class="underline">rivers</span>.</div>
+        <div>政府在花上很久的时间才能把河川<span class="highlight">清理干净</span>.</div>
+      </ion-card-content>
+    </ion-card>
+    <ion-card class="answers-card">
+      <ion-card-content class="answers-content">
+        <div class="answers md-word-choose clearfix">
+          <div class="word options">ages</div>
+          <div class="word options">clean</div>
+          <div class="word options">for</div>
+          <div class="word options">government</div>
+          <div class="word options disabled">It</div>
+          <div class="word options">rivers</div>          
+          <div class="word options disabled">takes</div>
+          <div class="word options">the</div>
+          <div class="word options">to</div>
+          <div class="word options">up</div>
+          <div class="word options">wash</div>
+          <div class="word options">out</div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6><a class="delete">提示</a></ion-col>
+        <ion-col col-6><a class="delete" (click)="backSpace()">←</a></ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button left (click)="incapable()">
+        我不会
+      </button>
+    <button ion-button right (click)="next()">
+        下一个
+      </button>
+  </ion-toolbar>
+</ion-footer>
