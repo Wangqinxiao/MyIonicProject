@@ -8,10 +8,14 @@
 <ion-content>
   <div *ngIf="test === 'chunkTest'">
     <div class="medal-progress">
-      <div class="medal-progress-content" [ngStyle]="getProgressCSS()"></div>
-      <div class="text-container">
-        <span class="progress-text">1/10</span>
-      </div>
+      <div class="medal-progress-content" style="background-color:#499142;width:10%"><div class="text-container">
+        <span class="progress-text">1</span></div></div>
+      <div class="medal-progress-content" style="background-color:#7CCD7C;width:70%"><div class="text-container">
+        <span class="progress-text">5</span></div></div>
+        <div class="medal-progress-content" style="background-color:#999;width:10%"><div class="text-container">
+        <span class="progress-text">1</span></div></div>
+      <div class="medal-progress-content" style="background-color:#D04335;width:10%"><div class="text-container">
+        <span class="progress-text">1</span></div></div>
     </div>
 
     <div class="passive-word">
@@ -44,10 +48,14 @@
   </div>
    <div *ngIf="test === 'sentenceTest'">
     <div class="medal-progress">
-      <div class="medal-progress-content" [ngStyle]="getProgressCSS()"></div>
-      <div class="text-container">
-        <span class="progress-text">1/10</span>
-      </div>
+      <div class="medal-progress-content" style="background-color:#499142;width:20%"><div class="text-container">
+        <span class="progress-text">2</span></div></div>
+      <div class="medal-progress-content" style="background-color:#7CCD7C;width:70%"><div class="text-container">
+        <span class="progress-text">5</span></div></div>
+        <div class="medal-progress-content" style="background-color:#999;width:0%"><div class="text-container">
+        <span class="progress-text"></span></div></div>
+      <div class="medal-progress-content" style="background-color:#D04335;width:10%"><div class="text-container">
+        <span class="progress-text">1</span></div></div>
     </div>
 
     <div class="passive-word">

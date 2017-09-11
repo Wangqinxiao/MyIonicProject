@@ -10,6 +10,8 @@ import { ExpressionTestPage } from '../test/test';
   templateUrl: 'learn.html'
 })
 export class ExpressionLearnPage {
+  enShow = false;
+  sentenceShow = false;
   getProgressCSS = function () {
     var num = 20;
     return { 'width': num + '%' };
@@ -35,5 +37,11 @@ export class ExpressionLearnPage {
   }
   next() {
     this.navCtrl.push(WordTestPage);
+  }
+  showEn(){
+    this.enShow = true;
+  }
+  showSentence(){
+    this.sentenceShow = true;
   }
 }

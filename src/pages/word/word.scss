@@ -24,8 +24,9 @@ ion-footer {
     position: relative;
     height: 15px;
     width: 100%;
-    border: 1px solid map-get($colors, 'primary' ) ;
+    border: 1px solid #999;
     overflow: hidden;
+    display: flex;
     .medal-progress-content {
         background: map-get($colors, 'primary' ) ;
         height: 100%;
@@ -44,8 +45,7 @@ ion-footer {
         align-items: center;
         justify-content: center;
         .progress-text {
-            color: gray;
-            text-shadow: 1px 1px 5px #fff;
+            color: #fff;
         }
     }
 }

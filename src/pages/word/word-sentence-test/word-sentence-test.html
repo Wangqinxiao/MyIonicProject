@@ -7,11 +7,15 @@
 
 <ion-content>
   <div class="medal-progress">
-    <div class="medal-progress-content" [ngStyle]="getProgressCSS()"></div>
-    <div class="text-container">
-      <span class="progress-text">1/10</span>
+       <div class="medal-progress-content" style="background-color:#499142;width:0%"><div class="text-container">
+        <span class="progress-text"></span></div></div> 
+      <div class="medal-progress-content" style="background-color:#7CCD7C;width:10%"><div class="text-container">
+        <span class="progress-text">1</span></div></div>
+        <div class="medal-progress-content" style="background-color:#999;width:90%"><div class="text-container">
+        <span class="progress-text">7</span></div></div>
+       <div class="medal-progress-content" style="background-color:#D04335;width:0%"><div class="text-container">
+        <span class="progress-text"></span></div></div> 
     </div>
-  </div>
 
   <div class="passive-word">
     <!-- <h3 text-center>

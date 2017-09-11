@@ -1,26 +1,22 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>表达积累</ion-title>
+    <ion-title>主题语块学习</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
   
-  <div class="medal-progress">
-    <div class="medal-progress-content" style = "width:0"></div>
-    <div class="text-container">
-      <span class="progress-text">0/10</span>
-    </div>
-  </div>
-
   <ion-card>
     <ion-card-header>
-      <!-- <span [ngSwitch]="status" class="float-right">
+       <!-- <span [ngSwitch]="status" class="float-right">
           <a *ngSwitchCase="'init'" (click)="screen()">筛选任务</a>
           <a *ngSwitchCase="'screening'" (click)="screenDone()">筛选完成</a>
-        </span> -->
+        </span>  -->
         任务列表
+        <span class="float-right">
+          <span style="color:green">3</span>／8
+        </span> 
     </ion-card-header>
     <ion-list>
       <ion-item *ngFor="let task of tasks;let i = index">
@@ -38,9 +34,10 @@
       </ion-item>
     </ion-list>
   </ion-card>
-  <button ion-button full clear (click)="itemTapped($event, item)">全部开始</button>
-
-
-
-
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button full (click)="itemTapped($event, item)">开始学习</button>
+  </ion-toolbar>
+</ion-footer>

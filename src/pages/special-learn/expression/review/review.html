@@ -8,19 +8,24 @@
 <ion-content>
 <!-- <img src="assets/img/review.png" (click)="next()"> -->
 <div class="medal-progress">
-  <div class="medal-progress-content" style = "width:50%"></div>
-  <div class="text-container">
-    <span class="progress-text">5/10</span>
-  </div>
-</div>
+      <div class="medal-progress-content" style="background-color:#499142;width:40%"><div class="text-container">
+        <span class="progress-text">3</span></div></div>
+      <div class="medal-progress-content" style="background-color:#7CCD7C;width:50%"><div class="text-container">
+        <span class="progress-text">4</span></div></div>
+      <div class="medal-progress-content" style="background-color:#D04335;width:10%"><div class="text-container">
+        <span class="progress-text">1</span></div></div>
+    </div>
  <ion-card>
     <ion-card-header>
         任务进度
+        <span class="float-right">
+          <span style="color:green">3</span>／8
+        </span>
     </ion-card-header>
     <ion-list>
       <ion-item *ngFor="let task of tasks;let i = index">
-        <ion-icon name="checkmark" style="font-size:30px;color:green;margin-right:10px;font-weight:bolder" [hidden]="i>3"></ion-icon>
-        <ion-icon name="checkmark" style="font-size:30px;color:transparent;margin-right:10px;font-weight:bolder" [hidden]="i<=3"></ion-icon>
+        <ion-icon name="checkmark" style="font-size:30px;color:green;margin-right:10px;font-weight:bolder" [hidden]="i>2"></ion-icon>
+        <ion-icon name="checkmark" style="font-size:30px;color:transparent;margin-right:10px;font-weight:bolder" [hidden]="i<=2"></ion-icon>
         <div style="display:inline-block;width: 90%;overflow: auto;text-overflow: ellipsis; white-space: normal;text-align: justify;">{{task.en}}<br>{{task.cn}}</div>
       </ion-item>
     </ion-list>

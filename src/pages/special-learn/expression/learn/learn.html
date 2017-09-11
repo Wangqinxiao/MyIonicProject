@@ -7,25 +7,31 @@
 
 <ion-content>
   <div class="medal-progress">
-    <div class="medal-progress-content" style="width:10%"></div>
-    <div class="text-container">
-      <span class="progress-text">1/10</span>
+       <div class="medal-progress-content" style="background-color:#499142;width:0%"><div class="text-container">
+        <span class="progress-text"></span></div></div> 
+      <div class="medal-progress-content" style="background-color:#7CCD7C;width:10%"><div class="text-container">
+        <span class="progress-text">1</span></div></div>
+        <div class="medal-progress-content" style="background-color:#999;width:90%"><div class="text-container">
+        <span class="progress-text">7</span></div></div>
+       <div class="medal-progress-content" style="background-color:#D04335;width:0%"><div class="text-container">
+        <span class="progress-text"></span></div></div> 
     </div>
-  </div>
+      <span style="position: absolute;top: 30px;right: 10px;color: #999"><ion-icon name="bulb"></ion-icon>请先英文表达，再对比答案</span>
 
   <div style="margin-top:100px;margin-bottom:50px">
     <h3 text-center>
-      工业排放物
+      清理
     </h3>
+    <button small ion-button style="position: absolute;right: 50px" *ngIf="!enShow" (click)="showEn()">查看英文</button>
   </div>
 
   <ion-card>
-    <ion-card-header>
+    <ion-card-header *ngIf="enShow">
       <ion-grid>
         <ion-row>
           <ion-col col-11>
             <div>
-              <h3>Industrial emissions</h3>
+              <h3>clean up</h3>
               <!-- <p>adj. 卓越的；极好的；杰出的</p> -->
             </div>
           </ion-col>
@@ -35,8 +41,9 @@
           </ion-col>
         </ion-row>
       </ion-grid>
+      <button small ion-button style="position: absolute;right: 50px" *ngIf="!sentenceShow" (click)="showSentence()">查看英文</button>
     </ion-card-header>
-    <ion-card-content>
+    <ion-card-content *ngIf="sentenceShow">
       <ion-grid>
         <ion-row>
           <ion-col col-11>
