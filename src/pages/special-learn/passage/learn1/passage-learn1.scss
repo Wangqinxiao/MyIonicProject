@@ -1,4 +1,4 @@
-page-passage-learn {
+page-passage-learn1 {
     #passageEn,
     #passageCn {
         text-align: justify;
@@ -8,8 +8,6 @@ page-passage-learn {
     .chunk {
         text-decoration: underline;
         font-weight: bolder;
-        background: none;
-        color: #000;
     }
     span.underline {
         text-decoration: underline;
@@ -21,8 +19,20 @@ page-passage-learn {
     ion-footer button {
         min-width: 80px;
     }
-    #note-page {
-        background: #fff;
+  
+    .side-page-content {
+        overflow: scroll;
+        height: 100%;
+    }
+    .submit-btn {
+        top: 50px;
+    }
+    .toolbar-content {
+        justify-content: center !important;
+    }
+}
+
+  #note-page {
         position: absolute;
         height: calc(100%-50px);
         top: 45px;
@@ -78,7 +88,6 @@ page-passage-learn {
         }
     }
     #chunk-page {
-        background: #fff;
         position: absolute;
         height: calc(100%-50px);
         top: 45px;
@@ -122,37 +131,3 @@ page-passage-learn {
         }
         box-shadow: -2px 1px 2px #999;
     }
-    .side-page-content {
-        overflow: scroll;
-        height: 100%;
-    }
-    .submit-btn {
-        top: 50px;
-    }
-    .toolbar-content {
-        justify-content: center !important;
-    }
-    .add-chunk{
-        position: relative;
-        display: inline-block;
-        background: map-get($colors, 'primary');
-        color: #fff;
-    }
-    .addTip{
-        position: absolute;
-        top: -35px;
-        right: -60px;
-        background: #000;
-        padding: 5px;
-        border-radius: 5px;
-        width: 70px;
-        color: #fff;
-    }
-}
-
-.selectable {
-  -webkit-user-select: text;
-  -moz-user-select: text;
-  -ms-user-select: text;
-  user-select: text;
-}

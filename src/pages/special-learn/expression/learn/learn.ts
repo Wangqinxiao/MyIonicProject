@@ -12,6 +12,8 @@ import { ExpressionTestPage } from '../test/test';
 export class ExpressionLearnPage {
   enShow = false;
   sentenceShow = false;
+  sentenceEnShow = false;
+  dict = false;
   getProgressCSS = function () {
     var num = 20;
     return { 'width': num + '%' };
@@ -43,5 +45,14 @@ export class ExpressionLearnPage {
   }
   showSentence(){
     this.sentenceShow = true;
+  }
+  showSentenceEn(){
+    this.sentenceEnShow = true;
+  }
+  showDict(){
+    this.dict = true;
+  }
+  closeDict(){
+    this.dict = false;
   }
 }

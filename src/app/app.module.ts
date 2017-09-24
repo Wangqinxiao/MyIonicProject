@@ -17,7 +17,9 @@ import { WritingTaskPage } from '../pages/writing-task/writing-task';
 import { SpecialLearnPage } from '../pages/special-learn/special-learn';
 import { PassagePreviewPage } from '../pages/special-learn/passage/preview/passage-preview';
 import { PassageLearnPage } from '../pages/special-learn/passage/learn/passage-learn';
+import { PassageLearnPage1 } from '../pages/special-learn/passage/learn1/passage-learn1';
 import { PassageTestPage } from '../pages/special-learn/passage/test/passage-test';
+import { PassageTestPage1 } from '../pages/special-learn/passage/test1/passage-test1';
 import { PassageResultPage } from '../pages/special-learn/passage/result/passage-result';
 import { ExperiencePage } from '../pages/special-learn/experience/experience';
 import { ExpressionTaskPage } from '../pages/special-learn/expression/task/task';
@@ -45,7 +47,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SpecialLearnPage,
     PassagePreviewPage,
     PassageLearnPage,
+    PassageLearnPage1,
     PassageTestPage,
+    PassageTestPage1, 
     PassageResultPage,
     ExperiencePage,
     ExpressionTaskPage,
@@ -74,7 +78,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SpecialLearnPage,
     PassagePreviewPage,
     PassageLearnPage,
+    PassageLearnPage1,
     PassageTestPage,
+    PassageTestPage1, 
     PassageResultPage,
     ExperiencePage,
     ExpressionTaskPage,
