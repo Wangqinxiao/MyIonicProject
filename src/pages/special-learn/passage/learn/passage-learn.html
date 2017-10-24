@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>篇章语块学习</ion-title>
+    <ion-title>范文语块学习</ion-title>
     <ion-buttons end (click)="showAlert($event)">
       <button ion-button icon-only color="royal">
         <ion-icon name="md-bulb" ></ion-icon>
@@ -95,7 +95,8 @@
       </div>
     </div>
   </div> -->
-  <button ion-button full (click)="complete()">学完学习</button>
+  <button ion-button full (click)="complete()">学习完成</button>
+  <button ion-button full (click)="showDict()">查词</button>
 </ion-content>
 <div id="note-page" [ngStyle]="{'right': deviceWidth+'px','width': deviceWidth-50+'px'}">
   <div class="side-page-content" padding>
@@ -168,3 +169,10 @@
   </button>
   </ion-toolbar>
 </ion-footer>
+<ion-footer style="background:#fff;padding:20px 20px 20px 100px;box-shadow:1px -3px 10px #999;" *ngIf="dict">
+  <ion-icon name="close" style="position:absolute;right:10px;top:10px;color:#488aff;font-size: 30px;" (click)="closeDict()"></ion-icon>
+  <h4>meaningful</h4>
+  英 [kliːn] <ion-icon ios="ios-volume-up" md="md-volume-up" style="color:#488aff;font-size: 20px;"></ion-icon>  &nbsp;&nbsp;&nbsp;  美 [klin] <ion-icon ios="ios-volume-up" md="md-volume-up" style="color:#488aff;font-size: 20px;"></ion-icon><br><br>
+  adj. 意味深长的；有意义的；富有意义的<br>
+
+</ion-footer>  

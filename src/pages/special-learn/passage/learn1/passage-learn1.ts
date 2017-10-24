@@ -117,7 +117,7 @@ export class PassageLearnPage1 {
   showAlert = function (event) {
     event.stopPropagation();
     let alert = this.alertCtrl.create({
-      title: '语块预习',
+      title: '范文语块预习',
       subTitle: '',
       message: '快速预览篇章学习中的关键语块<p>选择“太熟了”，表示您已经充分掌握了该语块的使用，系统会将该语块从学习任务中删除<br>选择“下一个”，或向右滑动，预览下一个语块<br>',
       buttons: ['多谢指点']

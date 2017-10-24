@@ -38,11 +38,16 @@
   </ion-card>
   <ion-grid>
     <ion-row>
-      <ion-col class="options" col-2 *ngFor="let option of testOptions; let optionIndex = index" (click)="pushAnswer (optionIndex)"><a class="letter">{{option}}</a></ion-col>
+      <ion-col class="options" col-3 *ngFor="let option of testOptions; let optionIndex = index" (click)="pushAnswer (optionIndex)"><a class="letter">{{option}}</a></ion-col>
+    </ion-row>
+    <ion-row>
       <ion-col col-6><a class="delete">提示</a></ion-col>
       <ion-col col-6><a class="delete" (click)="backSpace()">←</a></ion-col>
     </ion-row>
   </ion-grid>
+  <button ion-button clear small (click)="testDOMB()">优化前</button>
+  <button ion-button clear small (click)="testDOMA()">优化后</button>
+  <div id="there">There is a beautiful lady.There is a beautiful lady.There is a beautiful lady.There is a beautiful lady.There is a beautiful lady.There is a beautiful lady.There is a beautiful lady.There is a beautiful lady.There is a beautiful lady.There is a beautiful lady.There is a beautiful lady.</div>
 </ion-content>
 
 <ion-footer>

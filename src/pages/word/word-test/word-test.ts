@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { ToastController } from 'ionic-angular';
+
 import { WordResultPage } from '../word-result/word-result';
 import { WordSentenceTestPage  } from '../word-sentence-test/word-sentence-test';
 import { ExpressionTestPage } from '../../../pages/special-learn/expression/test/test';
@@ -21,16 +23,15 @@ export class WordTestPage {
   clickedOptionIndexs: number[] = [];
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public toastCtrl: ToastController) {
 
   }
 
   ngOnInit() {
     let sentence = "Not only could we <span class='highlight'>clean</span> up the atmosphere around the earth but could possibly be a money making mission for entrepreneurs.";
     this.translation = "这不仅仅<span class='highlight'>清理</span>了地球周围的环境，对企业家来说还有可能是一个有利可图的生意。";
-    // let sentence = "This is an <span class='highlight'>excellent</span> quality.";
-    // this.translation = "这是一种<span class='highlight'>杰出的</span>品质。";
-    // process data to question format: I love to  _ _ _ _ water.
+  
+    // 生成练习题资源
     let htmlObject = document.createElement('div');
     htmlObject.innerHTML = sentence;
     let highLightWord = htmlObject.getElementsByClassName('highlight')[0].innerHTML;
@@ -45,7 +46,7 @@ export class WordTestPage {
     this.letters = ['a', 'b', 'f', 'd', 'd', 'f', 'f', 'v', 'w', 'd', 'u', 'u'];
 
     // 随机生成字母
-    let randomLen = 12 - this.highLightWordArr.length;
+    let randomLen = 3;
     let randomResult = [];
     for (let j = 0; j < randomLen; j++) {
       let ranNum = Math.ceil(Math.random() * 25);
@@ -118,4 +119,34 @@ export class WordTestPage {
       item: item
     });
   }
+
+ 
+  testDOMB(){
+    let thereHtmls = document.getElementById('there');
+    for (let i = 0; i < 50; i++) {
+      thereHtmls.innerHTML =  'There is a handSome boy,There is a handSome boy,There is a handSome boy,There is a handSome boy,There is a handSome boy,There is a handSome boy,There is a handSome boy,There is a handSome boy,There is a handSome boy,There is a handSome boy';
+    }
+    let toast = this.toastCtrl.create({
+      message: 'doneB',
+      duration: 500,
+      position: 'top',
+    });
+    toast.present();
+  }
+
+   testDOMA(){
+    let thereHtmls = document.getElementById('there');
+    for (let i = 0; i < 50; i++) {
+      thereHtmls.className =  'underline right-letter';
+    }
+    let toast = this.toastCtrl.create({
+      message: 'doneA',
+      duration: 500,
+      position: 'top',
+    });
+    toast.present();
+
+
+  }
+
 }
